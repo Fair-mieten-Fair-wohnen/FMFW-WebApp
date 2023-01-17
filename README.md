@@ -1,4 +1,6 @@
-# Dokumentationssystem der berliner Fachstelle Fair mieten - Fair wohnen  
+# Dokumentationssystem
+
+## Berliner Fachstelle Fair mieten - Fair wohnen  
 
 Die Berliner Fachstelle gegen Diskriminierung auf dem Wohnungsmarkt, Fair mieten – Fair wohnen, wird getragen von der UP19 Stadtforschung + Beratung GmbH und dem Türkischen Bund in Berlin-Brandenburg. Die beiden Träger arbeiten eigenverantwortlich und ohne gemeinsame Rechtsform. Die Koordination der Zusammenarbeit leistet UP19.
 
