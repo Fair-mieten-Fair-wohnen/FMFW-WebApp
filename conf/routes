@@ -1,0 +1,57 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# API
+
+OPTIONS        /adwDocumentationSystem/api/v1/valuelists/grounds_of_discrimination                                      controllers.ExtValuelistController.optionReq(listType = "grounds_of_discrimination")
+GET            /adwDocumentationSystem/api/v1/valuelists/grounds_of_discrimination                                      controllers.ExtValuelistController.valueList(listType = "grounds_of_discrimination")
+
+OPTIONS        /adwDocumentationSystem/api/v1/valuelists/:listType                                                      controllers.ValuelistController.optionReq(listType: String)
+GET            /adwDocumentationSystem/api/v1/valuelists/:listType                                                      controllers.ValuelistController.valueList(listType: String)
+
+OPTIONS        /adwDocumentationSystem/api/v1/valuelists/map/:listType                                                  controllers.ValuelistController.optionReq(listType: String)
+GET            /adwDocumentationSystem/api/v1/valuelists/map/:listType                                                  controllers.ValuelistController.valueListAsMap(listType: String)
+
+OPTIONS        /adwDocumentationSystem/api/v1/incidents/column-names                                                    controllers.ColumnNameController.optionReq()
+GET            /adwDocumentationSystem/api/v1/incidents/column-names                                                    controllers.ColumnNameController.getColumnNames(tableName = "incidents")
+
+OPTIONS        /adwDocumentationSystem/api/v1/incidents/stubs                                                           controllers.IncidentController.optionReq(firstRow : Int = 0, maxRows : Int =100)
+GET            /adwDocumentationSystem/api/v1/incidents/stubs                                                           controllers.IncidentController.incidentStubs(firstRow : Int = 0, maxRows : Int =100)
+
+OPTIONS        /adwDocumentationSystem/api/v1/incidents/stubs/from/:firstRow/maxrows/:maxRows                           controllers.IncidentController.optionReq(firstRow : Int, maxRows : Int)
+GET            /adwDocumentationSystem/api/v1/incidents/stubs/from/:firstRow/maxrows/:maxRows                           controllers.IncidentController.incidentStubs(firstRow : Int, maxRows : Int)
+
+OPTIONS        /adwDocumentationSystem/api/v1/incidents/search/:searchExpression                                        controllers.IncidentController.optionSearchReq(firstRow : Int = 0, maxRows : Int =100, searchExpression: String)
+GET            /adwDocumentationSystem/api/v1/incidents/search/:searchExpression                                        controllers.IncidentController.searchIncidents(firstRow : Int = 0, maxRows : Int =100, searchExpression: String)
+
+OPTIONS        /adwDocumentationSystem/api/v1/incidents/search/:searchExpression/from/:firstRow/maxrows/:maxRows        controllers.IncidentController.optionSearchReq(firstRow : Int, maxRows : Int, searchExpression: String)
+GET            /adwDocumentationSystem/api/v1/incidents/search/:searchExpression/from/:firstRow/maxrows/:maxRows        controllers.IncidentController.searchIncidents(firstRow : Int, maxRows : Int, searchExpression: String)
+
+OPTIONS        /adwDocumentationSystem/api/v1/incident/:id                                                              controllers.IncidentController.optionReqWithId(id: Long)
+GET            /adwDocumentationSystem/api/v1/incident/:id                                                              controllers.IncidentController.getIncident(id: Long)
+
++nocsrf
+PUT            /adwDocumentationSystem/api/v1/incident/:id                                                              controllers.IncidentController.updateIncident(id: Long)
+
++nocsrf
+POST           /adwDocumentationSystem/api/v1/incident                                                                  controllers.IncidentController.createIncident()
+
+
+GET            /adwDocumentationSystem/api/v1/stats/simplestats/:token                                                  controllers.StatsController.simpleStats(token : String, mode :String = "default")
+
+GET            /adwDocumentationSystem/api/v1/stats/simpleotherstats/:token                                             controllers.StatsController.simpleStats(token : String, mode :String = "other")
+
+GET        /adwDocumentationSystem/api/v1/stats/archivejobs/:aggScope        controllers.StatsArchiveController.statsArchivJobs(aggScope :String)
+
+GET        /adwDocumentationSystem/api/v1/stats/aggregationtypes             controllers.StatsArchiveController.aggretationParams()
+
+GET            /adwDocumentationSystem/api/v1/stats/aggregation/:aggregationTypeID/jobid/:timeOfDataDumpID              controllers.StatsArchiveController.statsArchivJob(aggregationTypeID: String, timeOfDataDumpID : Long)
+
+# Serve index page from public directory
+GET            /                                                                                                        controllers.FrontendController.index()
+GET            /la                                                                                                      controllers.FrontendController.la()
+
+# Serve static assets under public directory
+GET            /*file                                                                                                   controllers.FrontendController.assetOrDefault(file)
+

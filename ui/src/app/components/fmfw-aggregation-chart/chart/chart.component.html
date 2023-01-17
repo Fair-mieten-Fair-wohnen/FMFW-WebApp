@@ -1,0 +1,7 @@
+<div style="width:90%;">
+  <canvas id="chart" width="10" height="5" #chart></canvas>
+</div>
+<div class="ggs">
+  {{ggsStr}}
+</div>
+<button *ngIf="printable" (click)="openChartInNewTab()">Print Chart</button>

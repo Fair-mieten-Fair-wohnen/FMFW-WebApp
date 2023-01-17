@@ -1,0 +1,44 @@
+<h1 *ngIf="heading">{{heading}}</h1>
+<div *ngIf="!item">loading...</div>
+<div *ngIf="item" class="summary-section">
+
+  <!-- Metadata -->
+  <fmfw-summary-metadata [item]="item"></fmfw-summary-metadata>
+
+  <!-- Vorgangstyp -->
+  <fmfw-summary-vorganstyp [item]="item"></fmfw-summary-vorganstyp>
+
+  <!-- Allgemeine Daten -->
+  <fmfw-summary-generaldata [item]="item"></fmfw-summary-generaldata>
+
+  <!-- Betroffene Person -->
+  <fmfw-summary-effected-person [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-effected-person>
+
+  <!-- UnterstuetzerInnen -->
+  <fmfw-summary-supporter [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-supporter>
+
+
+  <!-- Falltypologie -->
+  <fmfw-summary-falltypologie [item]="item"  *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-falltypologie>
+
+  <!-- VerursacherInnen -->
+  <fmfw-summary-causer [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-causer>
+
+  <!-- Kurzbeschreibung des Vorfalls -->
+  <fmfw-summary-short-incident-description [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-short-incident-description>
+
+  <!-- Beteiligte und Zeug*innen -->
+  <fmfw-summary-involved  [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-involved>
+
+    <!-- Beweise -->
+  <fmfw-summary-evidence  [item]="item" *ngIf="item.type !== 'ALLG_BERATUNG'"></fmfw-summary-evidence>
+
+  <!-- Protokollierung des Verlaufs 1 / Lösungsansatz -->
+  <fmfw-summary-conclusion [item]="item" *ngIf="item.type == 'FALLBETREUUNG'"></fmfw-summary-conclusion>
+
+  <!-- Protokollierung des Verlaufs 2 -->
+  <fmfw-summary-interventions [item]="item" *ngIf="item.type == 'FALLBETREUUNG'"></fmfw-summary-interventions>
+
+    <!-- Abschluss -->
+  <fmfw-summary-result [item]="item" *ngIf="item.type == 'FALLBETREUUNG'"></fmfw-summary-result>
+</div>

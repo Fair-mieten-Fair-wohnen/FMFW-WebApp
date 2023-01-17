@@ -1,0 +1,12 @@
+<div *ngIf="groundsOfDiscrimination; else NOSELECTEDGROUNDS">
+  <tree-root
+    #tree
+    (initialized)="initializeTree(tree)"
+    [nodes]="groundsOfDiscrimination"
+    [options]="options">
+  </tree-root>
+</div>
+<ng-template #NOSELECTEDGROUNDS>
+  <p i18n="Summary>GroundsOfDiscrimination>keine Diskriminierungsmerkmale ausgewählt@@SUMMARY_NO_GROUNDS_OF_DISCRIMINATION_SELECTED">
+    keine Diskriminierungsmerkmale ausgewählt</p>
+</ng-template>

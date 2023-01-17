@@ -1,0 +1,26 @@
+.table-area-header {
+  color: #fff;
+  background-color: #606060;
+  line-height: 2rem;
+}
+
+.table-area-subheader {
+  background-color: #cccccc;
+  line-height: 1.7rem;
+}
+
+@media print {
+  .table-area-header {
+    margin-top: 5px;
+    color: #000;
+    background-color: #fff !important;
+    font-weight: 600;
+    border-bottom: solid 2px #8e8e8e !important;
+  }
+  .table-area-subheader {
+    color: #000;
+    background-color: #fff !important;
+    border: solid 1px #bfbfbf !important;
+  }
+}
+

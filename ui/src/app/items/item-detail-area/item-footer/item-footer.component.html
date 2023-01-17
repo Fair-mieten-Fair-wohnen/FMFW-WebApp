@@ -1,0 +1,98 @@
+<div class="item-footer">
+  <div *ngIf="item && item.id && incidentTypes" class="row">
+    <div class="col-6 item-meta-data" *ngIf="item.metadata">
+      <span id="item-type">{{item.type && incidentTypes[item.type] ? incidentTypes[item.type].label : ''}}</span>
+      <span id="item-name">{{item.metadata.incident_number}}</span>
+      <span>({{consultantStr()}} - {{institutionStr()}})</span>
+      <br>
+      <ng-container *ngIf="item.metadata.lastupdated_date && item.metadata.lastupdated_user">
+      <span id="item-creation-date" i18n="Footer: letzte Änderung am@@LABEL_LAST_UPDATED_DATE">
+        letzte Änderung am </span>
+      <span>
+        {{(item.metadata.lastupdated_date ? item.metadata.lastupdated_date : item.metadata.creation_date) | date: dateFormat }}
+      </span>
+        <span id="item-consultant-institution" i18n="Footer: (letzte Änderung) vom@@LABEL_FROM"> von </span>
+        <span>{{item.metadata.lastupdated_user}}</span>
+      </ng-container>
+    </div>
+    <div class="col-6 footer-button-group">
+        <div class="row align-items-center align-items-right">
+          <button *ngIf="itemHasUnsavedChanges" (click)="save(true)"
+                  i18n="Button: Vorgang speichern und schließen (zum Dashboard zurückkehren)@@BUTTON_SAVE_AND_CLOSE"><!-- true -> close current incident and go back to dashboard -->
+            Speichern &amp; Schließen</button>
+          <button *ngIf="!itemHasUnsavedChanges" (click)="close()"
+                  i18n="Button: Vorgang schließen (zum Dashboard zurückkehren); wird angezeigt, wenn keine Änderungen vorliegen@@BUTTON_CLOSE"><!-- true -> close current incident and go back to dashboard -->
+            Schließen</button>
+          <button [disabled]="!itemHasUnsavedChanges" (click)="save(false)"
+                  i18n="Button: Vorgang zwischenspeichern@@BUTTON_SAVE"><!-- false -> do NOT close current incident -->
+            Zwischenspeichern</button>
+          <button [disabled]="!itemHasUnsavedChanges" (click)="discardChanges()"
+                  i18n="Button: Änderungen am Vorgang verwerfen@@BUTTON_CANCEL">
+            Letzte Änderungen verwerfen</button>
+<!--        <app-prev-next-button-group></app-prev-next-button-group>  -->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!item || !item.id" class="footer-button-group">
+    <button (click)="createItem()" i18n="Button: Neuen Vorgang anlegen@@BUTTON_CREATE_NEW_ITEM">Anlegen</button>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #infoConfirmDiscardChangesModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-footer-confirm-discard-changes">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-footer-confirm-discard-changes" class="modal-title pull-left"
+            i18n="Dialog-Header: Änderungen an einem Vorgang verwerfen?@@MODAL_HEADER_DISCARD_CHANGES">
+          Änderungen verwerfen?</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="infoSavingUnsuccessfulModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p i18n="Dialog-Infotext: Es liegen Änderungen an einem Vorgang vor, sollen diese verworfen werden?@@MODAL_TEXT_DISCARD_CHANGES">
+          Es liegen Änderungen an Ihrem Vorgang vor, die noch nicht gespeichert wurden.<br>
+          Wollen Sie Ihre Änderungen wirklich verwerfen?</p>
+        <div class="modal-button-group">
+          <button (click)="discardChangesConfirmed()"
+                  i18n="Button auf Modal 'Änderungen an einem Vorgang verwerfen' - verwerfen@@BUTTON_MODAL_DISCARD_CHANGES_YES">
+            Änderungen verwerfen</button>
+          <button (click)="infoConfirmDiscardChangesModal.hide()"
+                  i18n="Button auf Modal 'Änderungen an einem Vorgang verwerfen' - Zurück zum Vorgang@@BUTTON_MODAL_DISCARD_CHANGES_CANCEL">
+            Zurück zum Vorgang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #infoSavingUnsuccessfulModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-footer-inform-saving-unsuccessfully">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-footer-inform-saving-unsuccessfully" class="modal-title pull-left"
+            i18n="Dialog-Header: Fehler beim Speichern eines Vorgangs@@MODAL_HEADER_SAVE_UNSUCCESSFUL">
+          Fehler beim Speichern</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="infoSavingUnsuccessfulModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p i18n="Dialog-Infotext: Fehler beim Speichern eines Vorgangs, nochmal versuchen?@@MODAL_TEXT_SAVE_UNSUCCESSFUL_TRY_AGAIN">
+          Beim Speichern Ihres Vorgangs ist ein Fehler aufgetreten. Wollen Sie es erneut versuchen?</p>
+        <p *ngIf="error_msg">Fehlermeldung: {{error_msg}}</p>
+
+        <div class="modal-button-group">
+          <button type="button" (click)="tryAgain2SaveItem()"
+                  i18n="Button auf Modal 'Fehler beim Speichern eines Vorgangs' - nochmal versuchen@@BUTTON_MODAL_SAVE_UNSUCCESSFUL_TRY_AGAIN">
+            Erneut versuchen</button>
+          <button type="button" (click)="cleanup(); infoSavingUnsuccessfulModal.hide()"
+                  i18n="Button auf Modal 'Änderungen an einem Vorgang verwerfen' - abbrechen@@BUTTON_MODAL_SAVE_UNSUCCESSFUL_CANCEL">
+            Zurück</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

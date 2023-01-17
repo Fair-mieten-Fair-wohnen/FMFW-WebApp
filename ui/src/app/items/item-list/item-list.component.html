@@ -1,0 +1,120 @@
+<div id="header">
+  <app-nav-top-logout></app-nav-top-logout>
+</div>
+<div class="content">
+  <div class="item-list-screen">
+    <!--  <div id="news-text" *ngIf="infoText">
+        <ngx-md [data]="infoText.value"></ngx-md>
+      </div>
+    -->
+    <div class="spinner" *ngIf="tableCols.length === 0">
+      <!-- TODO: replace with spinner component -->
+      Waiting for data...
+    </div>
+    <div *ngIf="valueListsLoaded">
+      <div class="item-list-heading row">
+        <div class="col-4" i18n="Überschrift über der Liste aller Vorgänge@@HEADING_ITEM_LIST">
+          <h3>Liste Ihrer Vorgänge</h3>
+        </div>
+        <div class="col-8">
+          <fmfw-item-search
+            *ngIf="searchInitString !== undefined"
+            [searchInitString]="searchInitString"
+            (searchStringChanged)="searchChanged($event)"
+          ></fmfw-item-search>
+        </div>
+      </div>
+      <div>
+        <table class="table table-fixed fmfw-table table-striped" id="dashboard-items-list">
+          <thead>
+          <tr>
+            <th *ngFor="let column of tableCols" [innerHTML]="column.label"></th>
+          </tr>
+          </thead>
+          <tbody *ngIf="items && incidentTypes">
+          <tr *ngFor="let item of items" [ngClass]="calcRowClass(item)">
+            <td *ngFor="let column of tableCols">
+            <span *ngIf="column.type == 'icon-list'">
+                <button *ngIf="item.access_rights.includes('WRITE')"
+                        type="button" class="icon-btn"
+                        routerLink="../items-area/item/{{item.id}}" skipLocationChange
+                        i18n-title="Button-Tooltip: ändern@@BUTTON_TOOLTIP_EDIT" title="ändern">
+                  <span class="ion ion-md-create"></span></button>
+                <button *ngIf="!item.access_rights.includes('WRITE') && item.access_rights.includes('READ')"
+                        type="button" class="icon-btn"
+                        routerLink="../items-area/item/{{item.id}}" skipLocationChange
+                        i18n-title="Button-Tooltip: ansehen@@BUTTON_TOOLTIP_VIEW" title="ansehen">
+                  <span class="ion ion-md-eye"></span></button>
+                <button *ngIf="item.access_rights.includes('DELETE')"
+                        type="button" class="icon-btn" (click)="delete(item)"
+                        i18n-title="Button-Tooltip: löschen@@BUTTON_TOOLTIP_DELETE" title="löschen">
+                  <span class="ion ion-md-close-circle"></span></button>
+            </span>
+            <div *ngIf="column.type == 'boolean'" class="custom-checkbox-wrapper">
+              <input *ngIf="!!item[column.ref]" type="checkbox" checked disabled>
+            </div>
+            <span *ngIf="column.type != 'icon-list' && column.type != 'boolean'" routerLink="../items-area/item/{{item.id}}" skipLocationChange>
+            {{itemParamToString(item, column)}}
+            </span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-6 justify-content-start align-bottom bring-to-front">
+          <pagination
+            *ngIf="totalItems !== undefined"
+            [totalItems]="totalItems"
+            [ngModel]="currentPage"
+            (pageChanged)="pageChanged($event)"
+            [itemsPerPage]="currentPageSize"
+            [maxSize]="maxSize"
+            [boundaryLinks]=true
+            lastText=">>"
+            firstText="<<"
+            nextText=">"
+            previousText="<"
+          >
+          </pagination>
+        </div>
+        <div class="col-6 justify-content-end align-bottom">
+          <button id="button-add-item" routerLink="../items-area/item/neu"
+                  i18n="Button: Neuen Vorgang anlegen@@BUTTON_ADD_NEW_ITEM">
+            Neuen Vorgang anlegen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" bsModal #confirmDeleteItemModal="bs-modal"
+       tabindex="-1" role="dialog" aria-labelledby="confirm-delete-item">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="confirm-delete-item" class="modal-title pull-left"
+              i18n="Dialog-Header: ausgewählten Eintrag aus der Liste löschen?@@MODAL_HEADER_DELETE_ITEM">
+            Ausgewählten Eintrag löschen?</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="confirmDeleteItemModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p i18n="Dialog-Infotext: ausgewählten Eintrag aus der Liste löschen?@@MODAL_TEXT_DELETE_ITEM">
+            Soll der ausgewählte Eintrag wirklich gelöscht werden?</p>
+          <div class="modal-button-group">
+            <button (click)="deleteConfirmed()"
+                    i18n="Button auf Modal zum Bestätigen vom Löschen - löschen@@BUTTON_MODAL_DELETE_YES">
+              Löschen
+            </button>
+            <button (click)="confirmDeleteItemModal.hide()"
+                    i18n="Button auf Modal zum Bestätigen vom Löschen - abbrechen und nicht löschen@@BUTTON_MODAL_DELETE_NO">
+              nicht löschen
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

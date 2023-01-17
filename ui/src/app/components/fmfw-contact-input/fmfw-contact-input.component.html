@@ -1,0 +1,76 @@
+
+<div class="form-group row" [formGroup]="_formGroup">
+    <div class="col-3 ">
+      <label [for]="formId" class="col-form-label">{{label}}</label>
+    </div>
+    <div [id]="formId" class="col-8 form-group">
+
+      <ng-container *ngIf="addContactData || isContactDataInserted; else NoContactDataInserted">
+        <div class="col-12">
+          <fieldset class="form-group">
+            <div class="row" formGroupName="address">
+              <div class="col-12">
+
+                <fmfw-summary-header
+                  i18n-label="Adresse der betroffenen Person@@TAB_PERSON_LABEL_ADDRESS"
+                  label="Adresse:"
+                  class="table-area-subheader"></fmfw-summary-header>
+
+                <div class="form-group row">
+                  <label for="street" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld für die Straße der Adresse des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_ADDRESS_STREET">
+                    Straße:</label>
+                  <input type="text" formControlName="street"  id="street" class="col-sm-8 form-control">
+                </div>
+
+                <div class="form-group row">
+                  <label for="number" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld für die Hausnummer der Adresse des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_ADDRESS_NUMBER">
+                    Haus-Nr.:</label>
+                  <input type="text" formControlName="number"  id="number" class="col-sm-8 form-control">
+                </div>
+
+                <div class="form-group row">
+                  <label for="zip" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld für die Postleitzahl der Adresse des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_ADDRESS_ZIP">
+                    PLZ:</label>
+                  <input type="text" formControlName="zip"  id="zip" class="col-sm-8 form-control">
+                </div>
+
+                <div class="form-group row">
+                  <label for="city" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld für die Stadt der Adresse des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_ADDRESS_CITY">
+                    Ort:</label>
+                  <input type="text" formControlName="city"  id="city" class="col-sm-8 form-control">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group row">
+          <label for="ap_email" class="col-sm-3 col-form-label"
+                 i18n="E-Mail-Adresse der betroffenen Person@@TAB_PERSON_LABEL_EMAIL">
+            E-Mail:</label>
+          <input type="email" formControlName="email"  id="ap_email" class="col-9 form-control">
+        </div>
+
+        <div class="form-group row">
+          <label for="ap_phone" class="col-sm-3 col-form-label"
+                 i18n="Telefonnummer der betroffenen Person@@TAB_PERSON_LABEL_PHONE">
+            Telefon:</label>
+          <input type="text" formControlName="phone"  id="ap_phone" class="col-9 form-control">
+        </div>
+
+      </ng-container>
+
+    </div>
+  </div>
+
+  <ng-template #NoContactDataInserted>
+      <div class="row align-items-center align-items-right">
+          <button (click)="addContactData = true"
+                  i18n="Button: Kontaktdaten eingegeben@@BUTTON_ADD_CONTACT_DATA">
+            Kontaktdaten eingegeben</button>
+      </div>
+  </ng-template>

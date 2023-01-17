@@ -1,0 +1,22 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Vorgangstyp@@CONCLUSION_SUB_HEADER_INCIDENT_TYPE"
+    label="Vorgangstyp"></fmfw-summary-header>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Tab Zusammenfassung, Label Vorgangstyp@@CONCLUSION_LABEL_INCIDENT_TYPE"
+    label="Vorgang:"
+    keyValueListName="incident_type"
+    [item]="item"
+    paramPath="type"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-selectbox-content-textview
+    *ngIf="item.type === 'ALLG_BERATUNG'"
+    i18n-label="Tab Zusammenfassung, Label SubTyp einer allg. Beratung@@CONCLUSION_LABEL_ALLG_BERATUNG_SUBTYPE"
+    label="Typ der Beratung:"
+    keyValueListName="type_of_advise"
+    [item]="item"
+    paramPath="generaldata.type_of_advise"
+  ></fmfw-selectbox-content-textview>
+</section>

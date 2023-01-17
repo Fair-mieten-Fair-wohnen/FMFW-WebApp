@@ -1,0 +1,46 @@
+.login-pf body {
+    color: #484848;
+    font-family: Arial;
+    font-size: 1.2rem;
+    background-image: unset;
+    background-color: #fff;
+}
+
+.navbar {
+    height: 100px;
+    z-index: 500;
+    background-color: #336699;
+    margin: 0rem 0rem;
+    padding: unset;
+    color: #fff;
+}
+
+.headerTitle {
+    font-size: 3rem;
+    padding: 3rem 0rem;
+    color: #fff;
+}
+
+#logo {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0.5rem 0.5rem 0rem;
+    width: 200px;
+    height: 67px;
+    background: url("../img/logo-fmfw.png");
+}
+.card-pf {
+    background: #fff;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 500px;
+    border-top: 0;
+    box-shadow: 0 0 0;
+}
+.btn-primary {
+    background-color: #336699;
+    background-image: unset;
+    border-color: unset;
+    color: #fff;
+}
+

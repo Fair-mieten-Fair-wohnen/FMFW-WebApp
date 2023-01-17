@@ -1,0 +1,145 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div *ngIf="item">
+    <div>
+      <div class="fmfw-table-button-row">
+        <button id="button-add-item" (click)="showDialog2AddIntervention()" i18n="Button: Intervention hinzufügen@@BUTTON_ADD_INTERVENTION">
+          Neue Intervention hinzufügen</button>
+      </div>
+      <div>
+        <table class="table table-fixed fmfw-table table-striped">
+          <thead>
+          <tr>
+            <th i18n="Tabellenspalte Beschriftung: Datum der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_DATE_INTERVENTION">Datum</th>
+            <th i18n="Tabellenspalte Beschriftung: Auswahl der Form der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_FORM_OF_INTERVENTION">Form der Intervention</th>
+            <th i18n="Tabellenspalte Beschriftung: Bemerkung zur oder Beschreibung der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_DESCRIPTION">Bemerkung</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let intervention of item.interventions ; let i=index">
+            <td>{{intervention.date | date: dateFormat }}</td>
+            <td>
+              <fmfw-selectbox-content-textview
+                [item]="intervention"
+                paramPath="form_of_intervention"
+                keyValueListName="form_of_intervention">
+              </fmfw-selectbox-content-textview>
+            </td>
+            <td>
+              <textarea readonly
+                        class="form-control" rows="5">{{intervention.note}}</textarea>
+            </td>
+            <td>
+              <button type="button" class="icon-btn" (click)="editIntervention(i)"
+                      i18n-title="Button-Tooltip: ändern@@BUTTON_TOOLTIP_EDIT" title="ändern">
+                <span class="ion ion-md-create"></span></button>
+              <button type="button" class="icon-btn" (click)="deleteIntervention(i)"
+                      i18n-title="Button-Tooltip: löschen@@BUTTON_TOOLTIP_DELETE" title="löschen">
+                <span class="ion ion-md-close-circle"></span></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="i-need-space"></div>
+</div>
+
+<div class="modal fade" bsModal #editInterventionModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-edit-intervention-name">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-edit-intervention-name" class="modal-title pull-left"
+            i18n="Modal-Header Beschriftung: Intervention hinzufügen und ändern@@MODAL_EDIT_INTERVENTION_HEADER">
+          Intervention ändern/hinzufügen</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="editInterventionModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="editInterventionForm" (ngSubmit)="submitEditIntervention()">
+        <div class="modal-body">
+          <div *ngIf="editInterventionForm.hasError('required', ['date'])"
+               class="cross-validation-error-message alert alert-danger"
+               i18n="Fehlermeldung: beim Anlegen einer neuen Intervention muss das Datum der Intervention gesetzt werden@@ERROR_NO_INTERVENTION_DATE_SELECTED">
+            Bitte geben Sie das Datum der Intervention an (an dem sie stattgefunden bzw. begonnen hat)
+          </div>
+          <div *ngIf="editInterventionForm.hasError('required', ['form_of_intervention', 'selected'])"
+               class="cross-validation-error-message alert alert-danger"
+               i18n="Fehlermeldung: beim Anlegen einer neuen Intervention muss die Form der Intervention gesetzt werden@@ERROR_NO_INTERVENTION_FORM_SELECTED">
+            Bitte wählen Sie die Form der Intervention aus
+          </div>
+
+          <fmfw-date-select
+            label="Datum:"
+            i18n-label="Label Eingabefeld: Datum an dem die Intervention ausgeführt wurde@@MODAL_EDIT_INTERVENTION_LABEL_INTERVENTION_DATE"
+            formId="intervention"
+            formControlName="date"
+            ></fmfw-date-select>
+
+          <fmfw-selectbox-with-others
+            [formGroup]="editInterventionForm.get('form_of_intervention')"
+            formId="int_form_of_intervention"
+            label="Form der Intervention:"
+            i18n-label="Label Auswahl: Form der Intervention@@MODAL_EDIT_INTERVENTION_LABEL_FORM_OF_INTERVENTION"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für andere Form von Intervention angezeigt, wenn nichts eingegeben ist@@MODAL_EDIT_INTERVENTION_PLACEHOLDER_FORM_OF_INTERVENTION_OTHERS"
+            othersFieldPlaceholder="andere Form von Intervention eingeben"
+            keyValueListName="form_of_intervention">
+          </fmfw-selectbox-with-others>
+
+          <div class="form-group row">
+            <label for="intervention_note" class="col-sm-12 col-form-label"
+                   i18n="Label Eingabefeld: Bemerkungen zum Abschluss des Vorfalls@@MODAL_EDIT_INTERVENTION_LABEL_COMPLETION_DESCRIPTION">
+              Bemerkung:</label>
+            <textarea formControlName="note"
+                      id="intervention_note" class="col-sm-12 form-control" rows="5"></textarea>
+          </div>
+
+          <div class="modal-button-group">
+            <button type="submit"  [disabled]="!editInterventionForm.valid"
+                    i18n="Button auf Modal 'ändern/hinzufügen' - Änderungen übernehmen@@MODAL_EDIT_BUTTON_SUBMIT">
+              Änderungen übernehmen</button>
+            <button type="button" (click)="editInterventionModal.hide()"
+                    i18n="Button auf Modal 'ändern/hinzufügen' - abbrechen (Modal schließen, Änderungen nicht übernehmen aber Eingaben im Modal erstmal nicht entfernen@@MODAL_EDIT_BUTTON_CANCEL">
+              Abbrechen</button>
+            <button type="button" (click)="clearInputs()"
+                    i18n="Button auf Modal 'ändern/hinzufügen' - Eingaben zurücksetzen@@MODAL_EDIT_BUTTON_CLEAR">
+              Eingaben zurücksetzen</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #confirmDeleteItemModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="confirm-delete-item">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="confirm-delete-item" class="modal-title pull-left"
+            i18n="Dialog-Header: ausgewählte Intervention aus der Liste löschen?@@MODAL_HEADER_DELETE_INTERVENTION">
+          Intervention löschen?</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="confirmDeleteItemModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p i18n="Dialog-Infotext: ausgewählte Intervention aus der Liste löschen?@@MODAL_TEXT_DELETE_INTERVENTION">
+          Soll die ausgewählte Intervention wirklich gelöscht werden?</p>
+        <div class="modal-button-group">
+          <button (click)="deleteConfirmed()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - löschen@@BUTTON_MODAL_DELETE_YES">
+            Löschen</button>
+          <button (click)="confirmDeleteItemModal.hide()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - abbrechen und nicht löschen@@BUTTON_MODAL_DELETE_NO">
+            nicht löschen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

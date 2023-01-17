@@ -1,0 +1,169 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div>
+    <div *ngIf="item">
+      <div class="fmfw-table-button-row">
+        <button id="button-add-item" (click)="showDialog2AddSupporter()" i18n="Button: Unterstützer*in hinzufügen@@BUTTON_ADD_SUPPORTER">
+          Unterstützer*in hinzufügen</button>
+      </div>
+      <div>
+        <table class="table table-fixed fmfw-table table-striped">
+          <thead>
+          <tr>
+            <th i18n="Tabellenspalte Beschriftung: Unterstützungsformat - Tab Unterstützer*innen@@TABLE_SUPPORTER_COL_NAME_SUPPORT_FORMAT">Unterstützungsformat</th>
+            <th i18n="Tabellenspalte Beschriftung: Träger Institution - Tab Unterstützer*innen@@TABLE_SUPPORTER_COL_NAME_INSTITUTION">Träger/Institution</th>
+            <th i18n="Tabellenspalte Beschriftung: Name des*r Unterstützenden - Tab Unterstützer*innen@@TABLE_SUPPORTER_COL_NAME_SUPPORTER_NAME">Name</th>
+            <th i18n="Tabellenspalte Beschriftung: Kontaktdaten  einer Person bzw. Institution@@TABLE_LABEL_CONTACT">Kontakt</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let supporter of item.supporter_list ; let i=index">
+              <td>
+                <fmfw-selectbox-content-textview
+                  [item]="supporter"
+                  paramPath="support_format"
+                  keyValueListName="support_format">
+                </fmfw-selectbox-content-textview>
+              </td>
+              <td>{{supporter.institution_name}}</td>
+              <td>{{supporter.supporter_name}}</td>
+              <td><fmfw-contact-list-view [context]="supporter"></fmfw-contact-list-view></td>
+
+              <td>
+                <button type="button" class="icon-btn" (click)="editSupporter(i)"
+                        i18n-title="Button-Tooltip: ändern@@BUTTON_TOOLTIP_EDIT" title="ändern">
+                  <span class="ion ion-md-create"></span></button>
+                <button type="button" class="icon-btn" (click)="deleteSupporter(i)"
+                        i18n-title="Button-Tooltip: löschen@@BUTTON_TOOLTIP_DELETE" title="löschen">
+                  <span class="ion ion-md-close-circle"></span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="i-need-space"></div>
+  </div>
+
+  <div class="modal fade" bsModal #editSupporterModal="bs-modal"
+               tabindex="-1" role="dialog" aria-labelledby="dialog-edit-supporter-name">
+      <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="dialog-edit-supporter-name" class="modal-title pull-left"
+                i18n="Modal-Header Beschriftung: Unterstützer*in hinzufügen und ändern@@MODAL_EDIT_SUPPORTER_HEADER">
+              Unterstützer*in ändern/hinzufügen</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="editSupporterModal.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form [formGroup]="editSupporterForm" (ngSubmit)="onSubmit()">
+            <div class="modal-body">
+              <div *ngIf="supportTypeForm.hasError('emptyFormCannotSubmitted')"
+                   class="cross-validation-error-message alert alert-danger"
+                   i18n="Fehlermeldung: beim Anlegen eines neuen Unterstützuns-Eintrags muss das Unterstützunsformat ausgewählt werden@@ERROR_NO_SUPPORT_FORMAT_SELECTED">
+                Bitte wählen Sie das Unterstützunsformat aus
+              </div>
+              <div *ngIf="supporterNameForm.hasError('emptyFormCannotSubmitted')"
+                   class="cross-validation-error-message alert alert-danger"
+                   i18n="Fehlermeldung: im Modal muss mindestens ein Feld ausgefüllt werden@@ERROR_NO_FIELD_FILLED_IN_SUPPORTER_CREATION">
+                Neben dem Unterstützunsformat müssen Sie mindestens ein weiteres Feld ausfüllen
+              </div>
+              <div *ngIf="addressForm.hasError('pattern', ['zip'])"
+                   class="cross-validation-error-message alert alert-danger"
+                   i18n="Fehlermeldung: wenn eine Postleitzahl eingegeben wird, muss sie im korrekten Format sein@@ERROR_ZIP_FORMAT_NOT_VALID">
+                Wenn Sie eine Postleitzahl eingeben, geben Sie bitte genau 5 Zahlen ein
+              </div>
+              <div *ngIf="contactForm.hasError('pattern', ['email'])"
+                   class="cross-validation-error-message alert alert-danger"
+                   i18n="Fehlermeldung: wenn eine E-Mail-adresse eingegeben wird, muss sie im korrekten Format sein@@ERROR_EMAIL_FORMAT_NOT_VALID">
+                Wenn Sie eine E-Mail-Adresse eingeben, geben Sie bitte eine E-Mail in korrektem Format an
+              </div>
+              <div *ngIf="contactForm.hasError('pattern', ['phone'])"
+                   class="cross-validation-error-message alert alert-danger"
+                   i18n="Fehlermeldung: wenn eine Telefonnummer eingegeben wird, muss sie im korrekten Format sein@@ERROR_PHONE_NOMBER_FORMAT_NOT_VALID">
+                Wenn Sie eine Telefonnummer eingeben, geben Sie bitte eine Telefonnummer in korrektem Format an: Zahlen, Leerzeichen und +#()-_
+              </div>
+
+              <fmfw-selectbox-with-others
+                [formGroup]="editSupporterForm.get('support_format')"
+                formId="sup_support_format"
+                keyValueListName="support_format"
+                label="Unterstützungsformat:"
+                i18n-label="Label Eingabefeld: Unterstützungsformat@@MODAL_EDIT_SUPPORTER_LABEL_SUPPORT_FORMAT"
+                i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für anderes Unterstützungsformat angezeigt, wenn nichts eingegeben ist@@MODAL_EDIT_SUPPORTER_PLACEHOLDER_SUPPORT_FORMAT_OTHERS"
+                othersFieldPlaceholder="anderes Unterstützungsformat eingeben"
+              ></fmfw-selectbox-with-others>
+
+              <ng-container [formGroup]="supporterNameForm">
+                <div class="form-group row">
+                  <label for="sup_institution" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld: Träger bzw. Institution die unterstützt@@MODAL_EDIT_SUPPORTER_LABEL_INSTITUTION">
+                    Träger/Institution:</label>
+                  <input type="text" formControlName="institution_name"  id="sup_institution" class="col-sm-8 form-control">
+                </div>
+
+                <div class="form-group row">
+                  <label for="sup_name" class="col-sm-4 col-form-label"
+                         i18n="Label Eingabefeld: Name des*r Unterstützer*in oder Ansprechpartner*in beim Träger/bei der Institution@@MODAL_EDIT_SUPPORTER_LABEL_SUPPORTER_NAME">
+                    Name:</label>
+                  <input type="text" formControlName="supporter_name"  id="sup_name" class="col-sm-8 form-control">
+                </div>
+              </ng-container>
+
+              <fmfw-contact-input
+                [formGroup]="editSupporterForm.get('contact')"
+                formId="sup_contact"
+                label="Kontakt:"
+                i18n-label="Kontaktdaten einer Person bzw. Institution@@LABEL_CONTACT">
+              </fmfw-contact-input>
+
+              <div class="modal-button-group">
+                <button type="submit" [disabled]="!editSupporterForm.valid"
+                        i18n="Button auf Modal 'ändern/hinzufügen' - Änderungen übernehmen@@MODAL_EDIT_BUTTON_SUBMIT">
+                  Änderungen übernehmen</button>
+                <button type="button" (click)="editSupporterModal.hide()"
+                        i18n="Button auf Modal 'ändern/hinzufügen' - abbrechen (Modal schließen, Änderungen nicht übernehmen aber Eingaben im Modal erstmal nicht entfernen@@MODAL_EDIT_BUTTON_CANCEL">
+                  Abbrechen</button>
+                <button type="button" (click)="clearInputs()"
+                        i18n="Button auf Modal 'ändern/hinzufügen' - Eingaben zurücksetzen@@MODAL_EDIT_BUTTON_CLEAR">
+                  Eingaben zurücksetzen</button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" bsModal #confirmDeleteItemModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="confirm-delete-item">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="confirm-delete-item" class="modal-title pull-left"
+            i18n="Dialog-Header: ausgewählte*n Unterstützer*in aus der Liste löschen?@@MODAL_HEADER_DELETE_SUPPORTER">
+          Unterstützer*in löschen?</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="confirmDeleteItemModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p i18n="Dialog-Infotext: ausgewählte*n Unterstützer*in aus der Liste löschen?@@MODAL_TEXT_DELETE_SUPPORTER">
+          Soll der*ie ausgewählte Unterstützer*in wirklich gelöscht werden?</p>
+        <div class="modal-button-group">
+          <button (click)="deleteConfirmed()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - löschen@@BUTTON_MODAL_DELETE_YES">
+            Löschen</button>
+          <button (click)="confirmDeleteItemModal.hide()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - abbrechen und nicht löschen@@BUTTON_MODAL_DELETE_NO">
+            nicht löschen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

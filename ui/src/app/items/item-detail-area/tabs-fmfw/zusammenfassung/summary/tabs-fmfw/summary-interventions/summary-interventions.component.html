@@ -1,0 +1,41 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Interventionen(Protokollierung des Verlaufs Teil 2)@@CONCLUSION_SUB_HEADER_INTERVENTIONS"
+    label="Protokollierung des Verlaufs"></fmfw-summary-header>
+
+  <div>
+    <div *ngIf="!item.interventions || item.interventions.length == 0" class="row">
+      <div class="col-12"
+           i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Interventionen eingegeben wurden@@CONCLUSION_INFO_NO_INTERVENTIONS">
+        Keine Interventionen eingegeben
+      </div>
+    </div>
+    <ng-container *ngFor="let intervention of item.interventions; last as isLast; index as i">
+      <fmfw-summary-header
+        class="table-area-subheader"
+        i18n-label="Tab Zusammenfassung, Area Sub-Header Intervention Nummer x@@CONCLUSION_SUB_SUB_HEADER_INTERVENTION"
+        label="Intervention Nr."
+        labelsuffix="{{i+1}}">
+      </fmfw-summary-header>
+
+      <fmfw-textview [item]="intervention" paramPath="date"
+                     textFormat="{{TEXTVIEW_FORMATS.DATE}}" [dateTimeFormat]="dateFormat"
+                     i18n-label="Tabellenspalte Beschriftung: Datum der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_DATE_INTERVENTION"
+                     label="Datum:"></fmfw-textview>
+
+      <fmfw-selectbox-content-textview
+        i18n-label="Tabellenspalte Beschriftung: Auswahl der Form der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_FORM_OF_INTERVENTION"
+        label="Form der Intervention:"
+        keyValueListName="form_of_intervention"
+        [item]="intervention"
+        paramPath="form_of_intervention"
+      ></fmfw-selectbox-content-textview>
+
+      <fmfw-textview [item]="intervention" paramPath="note" textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"
+                     i18n-label="Tabellenspalte Beschriftung: Bemerkung zur oder Beschreibung der Intervention - Tab Protokollierung des Verlaufs 2@@TABLE_INTERVENTION_COL_NAME_DESCRIPTION"
+                     label="Bemerkung:"></fmfw-textview>
+
+      <hr *ngIf="!isLast"/>
+    </ng-container>
+  </div>
+</section>

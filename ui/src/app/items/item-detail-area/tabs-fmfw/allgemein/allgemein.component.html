@@ -1,0 +1,177 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div>
+    <div>
+      <form [formGroup]="incidentGeneralDataForm">
+        <div *ngIf="item && item.type !== 'ALLG_BERATUNG'" class="external-selection">
+          <fieldset class="form-group">
+            <div class="row">
+              <div class="offset-md-3 col-sm-8 glue-left">
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="external_incident" id="external_incident"
+                         type="checkbox">
+                  <label class="form-check-label" for="external_incident"
+                         i18n="Checkbox-label:für externe Beratungsstelle@@EXTERNAL">
+                    Für externe Beratungsstelle</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <ng-container *ngIf="item && item.metadata && item.metadata.external_incident">
+            <fmfw-selectbox-with-others
+              [formGroup]="incidentGeneralDataForm.get('responsible_institution')"
+              formId="gd_responsible_institution"
+              i18n-label="Label zu Auswahl der externen Beratungsstelle@@TAB_GENERAL_LABEL_EXTERNAL_INSTITUTION"
+              i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld angezeigt, Name einer anderen Beratungsstelle, wenn nichts eingegeben ist@@TAB_EXTERNAL_PLACEHOLDER_EXTERNAL_INSTITUTION_OTHERS"
+              keyValueListName="responsible_institution"
+              [notDisplayed]="notListedResponsibleInstitutions"
+              label="Externe Beratungsstelle:"
+              othersFieldPlaceholder="Freitext, Name einer anderen Beratungsstelle">
+            </fmfw-selectbox-with-others>
+          </ng-container>
+        </div>
+
+        <div class="general-data">
+          <fmfw-selectbox
+            formControlName="contact_by"
+            formId="contactBy"
+            i18n-label="Durch welche Personengruppe erfolgte die Kontaktaufnahme?@@TAB_GENERAL_CONTACT_BY"
+            keyValueListName="contact_by"
+            label="Kontaktaufnahme durch:">
+          </fmfw-selectbox>
+          <div class="form-group row">
+            <label class="col-xs-12 col-12 col-md-3 col-form-label" for="first_contact_date"
+                   i18n="Label Eingabefeld: Wann (Datum) fand die initiale Kontaktaufnahme statt?@@TAB_SHORT_DESCRIPTION_LABEL_FIRST_CONTACT_DATE">
+              Datum der ersten Kontaktaufnahme:</label>
+            <div class="col-xs-12 col-12 col-md-5 form-group">
+              <input #dp="bsDatepicker"
+                     [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY', containerClass: 'theme-dark-blue' }"
+                     bsDatepicker
+                     class="form-control"
+                     formControlName="first_contact_date"
+                     i18n-placeholder="Platzhalter wird im Eingabefeld für Datum des Vorfalls angezeigt, wenn nichts eingegeben ist@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_DATE"
+                     id="first_contact_date"
+                     placeholder="Datum auswählen"/>
+            </div>
+            <div class="col-xs-12 col-12 col-md-2 form-group">
+              <button (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen" class="btn btn-calendar">
+              </button>
+            </div>
+          </div>
+
+          <ng-container *ngIf="item && item.type !== 'ALLG_BERATUNG'">
+            <fmfw-selectbox-with-others
+              [formGroup]="incidentGeneralDataForm.get('advise_language')"
+              formId="gd_advise_language"
+              i18n-label="Label zu Auswahl der Sprache, in der die Beratung stattfinden soll@@TAB_PERSON_LABEL_ADVISE_LANGUAGE"
+              i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld angezeigt, in welcher Sprache die Beratung stattfinden soll, wenn nichts eingegeben ist@@TAB_PERSON_PLACEHOLDER_ADVISE_LANGUAGE_OTHERS"
+              keyValueListName="advise_language"
+              label="Sprache in der die Beratung stattfinden soll:"
+              othersFieldPlaceholder="Freitext, in welcher Sprache die Beratung stattfinden soll">
+            </fmfw-selectbox-with-others>
+          </ng-container>
+
+          <fieldset *ngIf="item && item.type === 'MELDUNG'" class="form-group">
+            <div class="row">
+              <div class="offset-md-3 col-sm-8 glue-left">
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="anonymous" id="anonymous"
+                         type="checkbox">
+                  <label class="form-check-label" for="anonymous"
+                         i18n="Eine Meldung kann hier als anonym gemeldet gekennzeichnet werden@@ANONYMOUS">
+                    anonym gemeldet</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <ng-container *ngIf="item && item.type === 'ALLG_BERATUNG'">
+            <fmfw-selectbox
+              formControlName="type_of_advise"
+              formId="contactBy"
+              i18n-label="Label fuer Auswahl, ob es sich bei einer allg. Beratung um eine Wohnungssuche oder Verweisberatung handelt?@@TAB_GENERAL_ADVISE_TYPE"
+              keyValueListName="type_of_advise"
+              label="Type der Beratung:">
+            </fmfw-selectbox>
+          </ng-container>
+
+          <ng-container
+            *ngIf="item && ((item.type === 'MELDUNG' && !(item.generaldata && item.generaldata.anonymous)) || item.type === 'FALLBETREUUNG')">
+            <fieldset class="form-group">
+              <div class="row">
+                <div class="offset-md-3 col-sm-8 glue-left">
+                  <div class="form-check">
+                    <input class="form-check-input" formControlName="consent_granted" id="consent_granted"
+                           type="checkbox">
+                    <label class="form-check-label" for="consent_granted"
+                           i18n="Wurde eine Einverständniserklärung der betroffenen Person gegeben?@@TAB_GENERAL_CONSENT_GRANTED">
+                      Einverständniserklärung erteilt
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </ng-container>
+
+          <fieldset class="form-group">
+            <div class="form-group row">
+              <label class="col-sm-12 col-form-label" for="general_comment"
+                     i18n="Label Eingabefeld: Allgemeine Bemerkungen zum Vorfalls@@TAB_GENERAL_COMMENT">
+                Bemerkung:</label>
+              <textarea class="col-sm-12 form-control"
+                        formControlName="general_comment" id="general_comment" rows="5"></textarea>
+            </div>
+          </fieldset>
+
+          <fmfw-selectbox-with-others
+            [formGroup]="incidentGeneralDataForm.get('become_aware_of')"
+            formId="gd_become_aware_of"
+            i18n-label="Label zu Auswahl, wie die Person von der Fachstelle erfahren hat@@TAB_PERSON_LABEL_BECOME_AWARE_OF"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld angezeigt, wie die Person von der Fachstelle erfahren hat, wenn nichts eingegeben ist@@TAB_PERSON_PLACEHOLDER_BECOME_AWARE_OF_OTHERS"
+            keyValueListName="become_aware_of"
+            label="Wie haben Sie von der Fachstelle erfahren?"
+            othersFieldPlaceholder="Freitext, wie die Person von der Fachstelle erfahren hat">
+          </fmfw-selectbox-with-others>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <div class="i-need-space"></div>
+</div>
+
+<div #infoAnonymousLooseDataModal="bs-modal" aria-labelledby="dialog-confirm-set-to-anonymous" bsModal
+     class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left" i18n="Dialog-Header: Change to anonymous Meldung@@MODAL_HEADER_SET_TO_ANONYMOUS"
+            id="dialog-confirm-set-to-anonymous">
+          Meldung anonym eingeben</h4>
+        <button (click)="cancel()" aria-label="Close" class="close pull-right" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p
+          i18n="Dialog-Infotext: wird anonym bei Meldung ausgewählt werden entsprechende Daten gelöscht@@MODAL_TEXT_SET_TO_ANONYMOUS">
+          Wenn sie eine Meldung anonym eingeben möchten, werden keine Daten zur betroffenen Person gespeichert. <br>
+          Falls Sie bereits Daten zur betroffenen Person eingegeben haben sollten, werden diese jetzt gelöscht.
+          Dazu gehören insbesondere Daten wie Name, Vorname, Adresse, Alter, Geschlecht<br><br>
+          Wollen Sie wirklich eine anonyme Meldung vornehmen und ggf. vorhandene Daten löschen?</p>
+        <div class="modal-button-group">
+          <button (click)="activateAnonymous()"
+                  i18n="Button auf Modal 'Change to anonymous Meldung' - Änderung durchführen@@BUTTON_MODAL_SET_TO_ANONYMOUS_GO_ON">
+            Ja, Meldung anonym erstellen
+          </button>
+          <button (click)="cancel()"
+                  i18n="Button auf Modal 'Change to anonymous Meldung' - abbrechen@@BUTTON_MODAL_SET_TO_ANONYMOUS_CANCEL">
+            Abbrechen und zurück zur Meldung
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

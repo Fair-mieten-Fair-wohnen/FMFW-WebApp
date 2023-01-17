@@ -1,0 +1,57 @@
+<section *ngIf="item.process_blog_part1 && valueListsLoaded">
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Protokollierung des Verlaufs Teil 1@@CONCLUSION_SUB_HEADER_INCIDENT_BLOG_PART1"
+    label="Lösungsansatz"></fmfw-summary-header>
+
+  <div class="row">
+    <div class="col-4 summary-label"
+         i18n="Label über einer Sammlung von Checkboxen: Ziele der betroffenen Person@@TAB_PROCESS_BLOG_1_LABEL_GOALS">
+      Ziele der betroffenen Person:
+    </div>
+    <div class="col-8"
+         *ngIf="!item.process_blog_part1 || !item.process_blog_part1.goal_person_concerned">{{notSetPlaceholder}}</div>
+    <div class="col-8" *ngIf="item.process_blog_part1 && item.process_blog_part1.goal_person_concerned">
+      <ul>
+        <li
+          *ngFor="let goal of listWithoutOthersSelection('goal_person_concerned', item.process_blog_part1.goal_person_concerned, goalsPersonConcerned)">
+          {{goal}}
+        </li>
+        <li *ngIf="item.process_blog_part1.goal_person_concerned.includes(otherSelectionKey)">
+          {{otherSelectionLabel}}
+          : {{item.process_blog_part1.goal_person_concerned_others ? item.process_blog_part1.goal_person_concerned_others : notSetPlaceholder}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 summary-label"
+         i18n="Label über einer Sammlung von Checkboxen: Einschätzung relevanter Rechtsbereiche@@TAB_PROCESS_BLOG_1_LABEL_AREAS_OF_LAW">
+      Einschätzung relevanter Rechtsbereiche:
+    </div>
+    <div class="col-8"
+         *ngIf="!item.process_blog_part1 || !item.process_blog_part1.areas_of_law">{{notSetPlaceholder}}</div>
+    <div class="col-8" *ngIf="item.process_blog_part1 && item.process_blog_part1.areas_of_law">
+      <ul>
+        <li
+          *ngFor="let area of listWithoutOthersSelection('areas_of_law', item.process_blog_part1.areas_of_law, areasOfLaw)">
+          {{area}}
+        </li>
+        <li *ngIf="item.process_blog_part1.areas_of_law.includes(otherSelectionKey)">
+          {{otherSelectionLabel}}
+          : {{item.process_blog_part1.areas_of_law ? item.process_blog_part1.areas_of_law : notSetPlaceholder}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <fmfw-textview [item]="item"
+                 i18n-label="Label Eingabefeld: Lösungsansatz des Vorfalls@@TAB_PROCESS_BLOG_1_LABEL_APPROACH"
+                 label="Lösungsansatz:"
+                 paramPath="process_blog_part1.approach"
+                 rows="5"
+                 textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"></fmfw-textview>
+
+</section>

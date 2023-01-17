@@ -1,0 +1,20 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Abschluss(Protokollierung des Verlaufs Teil 2)@@CONCLUSION_SUB_HEADER_OUTCOME"
+    label="Abschluss/Ergebnis"></fmfw-summary-header>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Label Auswahl: mit welchem Ergebnis konnte der Vorfall abgeschlossen werden?@@TAB_PROCESS_BLOG_2_LABEL_RESULT"
+    label="Abschluss / Ergebnis:"
+    keyValueListName="outcome"
+    multiple=true
+    [item]="item"
+    paramPath="completion.result"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-textview [item]="item" paramPath="completion.result_description" textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"
+                 i18n-label="Label Eingabefeld: Bemerkungen zum Abschluss des Vorfalls@@TAB_PROCESS_BLOG_2_LABEL_COMPLETION_DESCRIPTION"
+                 label="Bemerkung zum Abschluss:"></fmfw-textview>
+
+</section>
+

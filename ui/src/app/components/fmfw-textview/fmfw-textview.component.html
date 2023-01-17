@@ -1,0 +1,18 @@
+<ng-container *ngIf="label !== undefined; else NOLABEL">
+  <div class="row">
+    <div class="col-4 summary-label">{{label}}</div>
+    <div class="col-8"><ng-container [ngTemplateOutlet]="this[textFormat]"></ng-container></div>
+  </div>
+</ng-container>
+
+<ng-template #NOLABEL>
+  <ng-container [ngTemplateOutlet]="this[textFormat]"></ng-container>
+</ng-template>
+
+<ng-template #TEXT>{{fieldValue}}</ng-template>
+<ng-template #DATE><ng-container *ngIf="fieldValue; else notSetTextTemplate">{{fieldValue | date: dateTimeFormat}}</ng-container></ng-template>
+<ng-template #CHECKBOX>{{fieldValue ? '&#10003;' : '-'}}</ng-template>
+<ng-template #TEXTAREA><textarea readonly id="general_comment" class="form-control" [rows]="rows"
+          *ngIf="fieldValue; else notSetTextTemplate">{{fieldValue}}</textarea>
+</ng-template>
+<ng-template #notSetTextTemplate>{{getDefaultPlaceholder()}}</ng-template>

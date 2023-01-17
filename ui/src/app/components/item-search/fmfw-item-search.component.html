@@ -1,0 +1,21 @@
+<form [formGroup]="itemSearchForm">
+    <div class="input-group mb-3" >
+
+      <input type="text" class="form-control input-with-appender"
+       formControlName="searchstring"
+       i18n-placeholder="Platzhalter in Eingabefeld für Suche über der Vorgangsliste@@PLACEHOLDER_INCIDENT_SEARCH"
+       placeholder="Volltextsuche über alle Vorgänge, mind. 3 Zeichen erforderlich"
+       i18n-aria-label="Label für Eingabefeld für Suche über der Vorgangsliste (Accessibilty)@@ACCESSIBILITY_LABEL_INCIDENT_SEARCH"
+       aria-label="Volltextsuche über alle Vorgänge"
+       aria-describedby="basic-addon2">
+
+    <div class="input-group-append">
+      <button type="button" class="icon-btn" [disabled]="searchField.value.length == 0"
+              i18n-title="Button-Tooltip: Sucheingabe zurücksetzen@@BUTTON_CLEAR_SEARCH"
+              title="Sucheingabe zurücksetzen"
+              (click)="resetSearch()">
+        <span class="ion ion-md-close-circle"></span>
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,93 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Angaben zu VerursacherInnen@@CONCLUSION_SUB_HEADER_CAUSER"
+    label="Angaben zu Verursacher*innen"></fmfw-summary-header>
+
+  <div>
+    <div *ngIf="!item.causer_list || item.causer_list.length == 0" class="row">
+      <div class="col-12"
+           i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Verursacher*innen eingegeben wurden@@CONCLUSION_INFO_NO_CAUSER">
+        Keine Verursacher*innen eingegeben
+      </div>
+    </div>
+    <ng-container *ngFor="let causer of item.causer_list; last as isLast; index as i">
+      <fmfw-summary-header
+        class="table-area-subheader"
+        i18n-label="Tab Zusammenfassung, Area Sub-Header VerursacherIn Nummer x@@CONCLUSION_SUB_SUB_HEADER_CAUSER"
+        label="Verursacher*in Nr."
+        labelsuffix="{{i+1}}">
+      </fmfw-summary-header>
+
+      <fmfw-textview [item]="causer" paramPath="company_institution_name"
+                     i18n-label="Label Eingabefeld: Firma / Institution die den Vorfall verursacht haben@@MODAL_EDIT_CAUSER_LABEL_COMPANY"
+                     label="Firma/Institution:"></fmfw-textview>
+
+      <fmfw-textview [item]="causer" paramPath="causer_name"
+                     i18n-label="Label Eingabefeld: Name des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_CAUSER_NAME"
+                     label="Name:"></fmfw-textview>
+
+      <fmfw-contact-textview [context]="causer"></fmfw-contact-textview>
+
+      <ng-container *ngIf="getCauserTypeFor(causer); else noCauserTypeForCauser">
+        <div class="row">
+          <div class="col-4 summary-label" i18n="Tab Zusammenfassung, Area Sub-Header Typologie des Verursachenden Nummer x@@CONCLUSION_SUB_SUB_HEADER_INTERVENTION">Typologie des Verursachenden:
+          </div>
+          <div class="col-8">
+            <fmfw-causer-type-textview [causerType]="getCauserTypeFor(causer)"></fmfw-causer-type-textview>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noCauserTypeForCauser>
+        <div class="col-12"
+             i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn zu dem Verursachenden kein Typ ausgewählt/eingegeben wurde@@CONCLUSION_INFO_NO_CAUSER_TYPE_FOR_CAUSER">
+          Zu dem Verursachenden wurde kein Typ ausgewählt/eingegeben
+        </div>
+      </ng-template>
+
+
+      <hr *ngIf="!isLast"/>
+    </ng-container>
+  </div>
+<!--
+  <section>
+    <div>
+      <div *ngIf="!item.incident_typology || (item.incident_typology && (!item.incident_typology.causer_typology || item.incident_typology.causer_typology.length == 0))" class="row">
+        <div class="col-12"
+             i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Typologie der Verursachenden eingegeben wurde@@CONCLUSION_INFO_NO_CAUSER_TYPOLOGY">
+          Keine Typologie der Verursachenden eingegeben
+        </div>
+      </div>
+      <ng-container *ngIf="item.incident_typology && item.incident_typology.causer_typology">
+        <ng-container *ngFor="let causer of item.incident_typology.causer_typology; last as isLast; index as i">
+          <fmfw-summary-header
+            class="table-area-subheader"
+            i18n-label="Tab Zusammenfassung, Area Sub-Header Typologie des Verursachenden Nummer x@@CONCLUSION_SUB_SUB_HEADER_INTERVENTION"
+            label="Typologie des Verursachenden Nr."
+            labelsuffix="{{i+1}}">
+          </fmfw-summary-header>
+
+          <div class="row">
+            <div class="col-4 summary-label" i18n="Label Eingabefeld: Typ des*r Verursachenden@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_CAUSER_TYPE">
+              Typ des*r Verursachenden:</div>
+            <div class="col-8">{{listItemProperties(causer, 'causer_type', 'causer_type_others', causerTypes)}}</div>
+          </div>
+
+          <ng-container *ngIf="showAdditionalInputs(causer)">
+            <div class="row">
+              <div class="col-4 summary-label" i18n="Unsichtbares Label für das Eingabefeld für Form der Vermietung (Accessibility)@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_OWNER_AGENCY">
+                Form der Vermietung:</div>
+              <div class="col-8">{{listItemProperties(causer, 'owner_agency', 'owner_agency_others', ownerAgencyTypes)}}</div>
+            </div>
+            <div class="row">
+              <div class="col-4 summary-label" i18n="Unsichtbares Label für das Eingabefeld für Anzahl der Wohneinheiten (Accessibility)@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_NUMBER_OF_APPARTMENTS">
+                Anzahl der Wohneinheiten:</div>
+              <div class="col-8">{{listItemProperties(causer, 'number_of_appartments', 'number_of_appartments_others', numbersOfAppartments)}}</div>
+            </div>
+          </ng-container>
+          <hr *ngIf="!isLast"/>
+        </ng-container>
+      </ng-container>
+    </div>
+  </section>
+  -->
+</section>

@@ -1,0 +1,19 @@
+<div class="print-header-block">
+  <div>
+    <img src="/assets/images/Wort_Bild_Zusatz_k_rand.png">
+  </div>
+</div>
+<div class="print-content" *ngIf="timeOfDataDump">
+  <div class="aggregation-print-header">
+    <h1
+      i18n="Druckansicht Ueberschrift: Aggregation aller Faelle@@PRINT_VIEW_HEADING_AGGREGATION_OF_CASES">Aggregation
+      der Fälle des Dokumentationssystem</h1>
+    <h2 *ngIf="aggScopeInternal"
+        i18n="Druckansicht Unter-Ueberschrift: nur interne Faelle@@PRINT_VIEW_HEADING_AGGREGATION_ONLY_INTERNAL_CASES">
+      <span id="info-internal-cases">(Nur interne Fälle der FMFW-Fachstelle)</span></h2>
+    <h2 *ngIf="timeOfDataDumpObj && timeOfDataDumpObj.timestamp"
+        i18n="Druckansicht, Label, Aggregation von Datum@@PRINT_VIEW_LABEL_AGGREGATION_DATE">
+      Stand: {{timeOfDataDumpObj.timestamp | date: dateFormat}}</h2>
+  </div>
+  <fmfw-list-of-aggregated-charts [printable]=false [timeOfDataDump]="timeOfDataDump"></fmfw-list-of-aggregated-charts>
+</div>

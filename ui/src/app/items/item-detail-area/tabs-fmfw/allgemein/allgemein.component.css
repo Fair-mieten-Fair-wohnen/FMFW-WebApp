@@ -1,0 +1,9 @@
+.external-selection {
+  padding: 10px 5px;
+  border-bottom: 1px solid #cccccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.general-data {
+  margin-top: 40px;
+}

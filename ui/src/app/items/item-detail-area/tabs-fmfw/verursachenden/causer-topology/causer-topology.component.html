@@ -1,0 +1,52 @@
+<div class="form-group row" [formGroup]="_formGroup">
+  <div class="col-3 ">
+    <label [for]="formId" class="col-form-label">{{label}}</label>
+  </div>
+  <div [id]="formId" class="col-8 form-group">
+
+    <ng-container *ngIf="addCauserTypology || isDataInserted; else NoTypoDataInserted">
+
+      <fmfw-selectbox-with-others
+        [formGroup]="_formGroup.get('causer_type')"
+        formId="cty_causer_type"
+        keyValueListName="causer"
+        label="Typ des*r Verursachenden:"
+        i18n-label="Label Eingabefeld: Typ des*r Verursachenden@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_CAUSER_TYPE"
+        i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für anderen Typ von Verursachendem angezeigt, wenn nichts eingegeben ist@@MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_CAUSER_TYPE_OTHERS"
+        othersFieldPlaceholder="anderen Typ von Verursachendem eingeben"
+      ></fmfw-selectbox-with-others>
+
+      <fmfw-selectbox-with-others
+        [hidden]="!showAdditionalInputs"
+        [formGroup]="_formGroup.get('owner_agency')"
+        formId="cty_owner_agency"
+        keyValueListName="owner_agency"
+        label="Form der Vermietung:"
+        i18n-label="Unsichtbares Label für das Eingabefeld für Form der Vermietung (Accessibility)@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_OWNER_AGENCY"
+        i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für  andere Form der Vermietung angezeigt, wenn nichts eingegeben ist@@MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_OWNER_AGENCY_OTHERS"
+        othersFieldPlaceholder="andere Form der Vermietung eingeben"
+      ></fmfw-selectbox-with-others>
+
+      <fmfw-selectbox-with-others
+        [hidden]="!showAdditionalInputs"
+        [formGroup]="_formGroup.get('number_of_appartments')"
+        formId="cty_number_of_appartments"
+        keyValueListName="number_of_appartments"
+        label="Anzahl der Wohneinheiten:"
+        i18n-label="Unsichtbares Label für das Eingabefeld für Anzahl der Wohneinheiten (Accessibility)@@MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_NUMBER_OF_APPARTMENTS"
+        i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für  andere Anzahl der Wohneinheiten angezeigt, wenn nichts eingegeben ist@@MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_NUMBER_OF_APPARTMENTS_OTHERS"
+        othersFieldPlaceholder="andere Anzahl der Wohneinheiten eingeben"
+      ></fmfw-selectbox-with-others>
+
+    </ng-container>
+
+  </div>
+</div>
+
+<ng-template #NoTypoDataInserted>
+  <div class="row align-items-center align-items-right">
+    <button (click)="addCauserTypology = true"
+            i18n="Button: Typ des*r Verursachers eingegeben@@BUTTON_ADD_CAUSER_TYPE_DATA">
+      Typ des*r Verursachers eingegeben</button>
+  </div>
+</ng-template>

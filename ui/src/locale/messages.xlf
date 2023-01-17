@@ -1,0 +1,2306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="NAV_LINK_DASHBOARD" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/utils/nav-top-logout/nav-top-logout.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Link auf das Dashboard in der oberen Navigationsleiste</note>
+      </trans-unit>
+      <trans-unit id="NAV_LINK_SUPPORT_FORM" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/utils/nav-top-logout/nav-top-logout.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Link auf das Support-Formular in der oberen Navigationsleiste</note>
+      </trans-unit>
+      <trans-unit id="NAV_LINK_LOGOUT" datatype="html">
+        <source>Abmelden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/utils/nav-top-logout/nav-top-logout.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Link zum Abmelden des NUtzers in der oberen Navigationsleiste</note>
+      </trans-unit>
+      <trans-unit id="HEADING_PAGE_NOT_FOUND" datatype="html">
+        <source>Seite nicht gefunden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Überschrift auf Page-Not-Found Seite</note>
+      </trans-unit>
+      <trans-unit id="INFO_PAGE_NOT_FOUND" datatype="html">
+        <source>Die Seite konnte nicht gefunden werden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Infotext auf Page-Not-Found Seite</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_BACK_TO_DASHBOARD" datatype="html">
+        <source>Zurück zum Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/access-denied/access-denied.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button um zurück zum Dashboard zu kommen</note>
+      </trans-unit>
+      <trans-unit id="HEADING_ACCESS_DENIED" datatype="html">
+        <source>Zugriff verweigert</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/access-denied/access-denied.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Überschrift auf Access-Denied Seite</note>
+      </trans-unit>
+      <trans-unit id="INFO_ACCESS_DENIED" datatype="html">
+        <source>Sie haben nicht die Berechtigung auf diesen Vorgang zuzugreifen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/access-denied/access-denied.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Infotext auf Access-Denied Seite</note>
+      </trans-unit>
+      <trans-unit id="HEADING_SUPPORT_FORM" datatype="html">
+        <source>Support-Formular</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/help/support-form/support-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Heading: Support Form</note>
+      </trans-unit>
+      <trans-unit id="INFO_ABOUT_SUPPORT_FORM" datatype="html">
+        <source>
+        Wenn Sie Fragen zum Dokumentationssystem habe oder wenn Sie eine Fehlfunktion entdeckt haben, können Sie uns hier eine Nachricht senden.
+        Bitte beschreiben Sie das Fehlverhalten möglichst genau. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Unser Supportteam wird sich bei Ihnen melden.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/help/support-form/support-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Info Text: Support Form</note>
+      </trans-unit>
+      <trans-unit id="HEADING_ITEM_LIST" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/>Liste Ihrer Vorgänge<x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Überschrift über der Liste aller Vorgänge</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_TOOLTIP_EDIT" datatype="html">
+        <source>ändern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Button-Tooltip: ändern</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_TOOLTIP_VIEW" datatype="html">
+        <source>ansehen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Button-Tooltip: ansehen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_TOOLTIP_DELETE" datatype="html">
+        <source>löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Button-Tooltip: löschen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_NEW_ITEM" datatype="html">
+        <source>
+        Neuen Vorgang anlegen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Button: Neuen Vorgang anlegen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_DELETE_ITEM" datatype="html">
+        <source>
+          Ausgewählten Eintrag löschen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: ausgewählten Eintrag aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DELETE_ITEM" datatype="html">
+        <source>
+          Soll der ausgewählte Eintrag wirklich gelöscht werden?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">240</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: ausgewählten Eintrag aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DELETE_YES" datatype="html">
+        <source>
+            Löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal zum Bestätigen vom Löschen - löschen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DELETE_NO" datatype="html">
+        <source>
+            nicht löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-list.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal zum Bestätigen vom Löschen - abbrechen und nicht löschen</note>
+      </trans-unit>
+      <trans-unit id="TAB_GENERAL_CONTACT_BY" datatype="html">
+        <source>
+            Kontaktaufnahme durch:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/allgemein/allgemein.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Durch welche Personengruppe erfolgte die Kontaktaufnahme?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_FIRST_CONTACT_DATE" datatype="html">
+        <source>
+            Datum der ersten Kontaktaufnahme:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/allgemein/allgemein.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Wann (Datum) fand die initiale Kontaktaufnahme statt?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_DATE" datatype="html">
+        <source>Datum auswählen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/allgemein/allgemein.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für Datum des Vorfalls angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="ANONYMOUS" datatype="html">
+        <source>
+                  anonym gemeldet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/allgemein/allgemein.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Eine Meldung kann hier als anonym gemeldet gekennzeichnet werden</note>
+      </trans-unit>
+      <trans-unit id="TAB_GENERAL_CONSENT_GRANTED" datatype="html">
+        <source>
+                  Einverständniserklärung erteilt
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/allgemein/allgemein.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Wurde eine Einverständniserklärung der betroffenen Person gegeben?</note>
+      </trans-unit>
+      <trans-unit id="ERROR_ZIP_FORMAT_NOT_VALID" datatype="html">
+        <source>
+          Wenn Sie eine Postleitzahl eingeben, geben Sie bitte genau 5 Zahlen ein
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: wenn eine Postleitzahl eingegeben wird, muss sie im korrekten Format sein</note>
+      </trans-unit>
+      <trans-unit id="ERROR_EMAIL_FORMAT_NOT_VALID" datatype="html">
+        <source>
+          Wenn Sie eine E-Mail-Adresse eingeben, geben Sie bitte eine E-Mail in korrektem Format an
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen einer neuen Beweisstück muss die Dokumentenablage eingegeben werden</note>
+      </trans-unit>
+      <trans-unit id="ERROR_PHONE_NOMBER_FORMAT_NOT_VALID" datatype="html">
+        <source>
+          Wenn Sie eine Telefonnummer eingeben, geben Sie bitte eine Telefonnummer in korrektem Format an: Zahlen, Leerzeichen und +#()-_
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: wenn eine Telefonnummer eingegeben wird, muss sie im korrekten Format sein</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_NAME" datatype="html">
+        <source>
+            Name:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">Nachname der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_FIRSTNAME" datatype="html">
+        <source>
+            Vorname:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Vorname der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_ADDRESS" datatype="html">
+        <source>
+                Adresse:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">Adresse der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_ADDRESS_STREET" datatype="html">
+        <source>
+                  Straße:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld für die Straße der Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_ADDRESS_NUMBER" datatype="html">
+        <source>
+                  Haus-Nr.:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld für die Hausnummer der Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_ADDRESS_ZIP" datatype="html">
+        <source>
+                  PLZ:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld für die Postleitzahl der Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_ADDRESS_CITY" datatype="html">
+        <source>
+                  Ort:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld für die Stadt der Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_EMAIL" datatype="html">
+        <source>
+            E-Mail:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">E-Mail-Adresse der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_PHONE" datatype="html">
+        <source>
+            Telefon:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">Telefonnummer der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_GENDER" datatype="html">
+        <source>
+            Gender:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description">Geschlecht der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_GENDER_OTHERS" datatype="html">
+        <source>
+            anderes Geschlecht:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderes Geschlecht der betroffenen Person (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_PLACEHOLDER_GENDER_OTHERS" datatype="html">
+        <source>anderes Geschlecht eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderes Geschlecht angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_AGE" datatype="html">
+        <source>
+            Alter:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <note priority="1" from="description">Alter der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_ETHNIC_ORIGIN" datatype="html">
+        <source>
+            Ethnische Herkunft:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">Ethnische Herkunft der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_ABSORB_PROCESS_COSTS" datatype="html">
+        <source>
+            Prozesskostenübernahme wahrscheinlich:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <note priority="1" from="description">Angabe darüber wie wahrscheinlich eine Prozesskostenübernahme ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_LABEL_ABSORB_PROCESS_COSTS_OTHERS" datatype="html">
+        <source>
+            Prozesskostenübernahme wahrscheinlich, andere:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für Prozesskostenübernahme wahrscheinlich, andere (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_PERSON_PLACEHOLDER_ABSORB_PROCESS_COSTS_OTHERS" datatype="html">
+        <source>Freitext zur Prozesskostenübernahme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/person/person.component.html</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für Prozesskostenübernahme wahrscheinlich, andere angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_SUPPORTER" datatype="html">
+        <source>
+          Unterstützer*in hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button: Unterstützer*in hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_SUPPORTER_COL_NAME_SUPPORT_FORMAT" datatype="html">
+        <source>Unterstützungsformat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Unterstützungsformat - Tab Unterstützer*innen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_SUPPORTER_COL_NAME_INSTITUTION" datatype="html">
+        <source>Träger/Institution</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Träger Institution - Tab Unterstützer*innen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_SUPPORTER_COL_NAME_SUPPORTER_NAME" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Name des*r Unterstützenden - Tab Unterstützer*innen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_SUPPORTER_COL_NAME_SUPPORTER_EMAIL" datatype="html">
+        <source>E-Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Email des*r Unterstützenden - Tab Unterstützer*innen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_SUPPORTER_COL_NAME_SUPPORTER_PHONE" datatype="html">
+        <source>Telefon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Telefonnummer des*r Unterstützenden - Tab Unterstützer*innen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_HEADER" datatype="html">
+        <source>
+              Unterstützer*in ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Unterstützer*in hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_SUPPORT_FORMAT_SELECTED" datatype="html">
+        <source>
+                Bitte wählen Sie das Unterstützunsformat aus
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen eines neuen Unterstützuns-Eintrags muss das Unterstützunsformat ausgewählt werden</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_FIELD_FILLED_IN_SUPPORTER_CREATION" datatype="html">
+        <source>
+                Neben dem Unterstützunsformat müssen Sie mindestens ein weiteres Feld ausfüllen
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: im Modal muss mindestens ein Feld ausgefüllt werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_SUPPORT_FORMAT" datatype="html">
+        <source>
+                  Unterstützungsformat:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Unterstützungsformat</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_SUPPORT_FORMAT_OTHERS" datatype="html">
+        <source>
+                  anderes Unterstützungsformat:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderes Unterstützungsformat (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_PLACEHOLDER_SUPPORT_FORMAT_OTHERS" datatype="html">
+        <source>anderes Unterstützungsformat eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderes Unterstützungsformat angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_INSTITUTION" datatype="html">
+        <source>
+                  Träger/Institution:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Träger bzw. Institution die unterstützt</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_SUPPORTER_NAME" datatype="html">
+        <source>
+                  Name:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Name des*r Unterstützer*in oder Ansprechpartner*in beim Träger/bei der Institution</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_EMAIL" datatype="html">
+        <source>
+                  E-Mail:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: E-Mail-Adresse zur Kontaktaufnahme mit Unterstützer*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_SUPPORTER_LABEL_PHONE" datatype="html">
+        <source>
+                  Telefon:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Telefonnummer zur Kontaktaufnahme mit Unterstützer*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_BUTTON_SUBMIT" datatype="html">
+        <source>
+                  Änderungen übernehmen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;ändern/hinzufügen&apos; - Änderungen übernehmen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_BUTTON_CANCEL" datatype="html">
+        <source>
+                  Abbrechen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">220</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;ändern/hinzufügen&apos; - abbrechen (Modal schließen, Änderungen nicht übernehmen aber Eingaben im Modal erstmal nicht entfernen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_BUTTON_CLEAR" datatype="html">
+        <source>
+                  Eingaben zurücksetzen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">223</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;ändern/hinzufügen&apos; - Eingaben zurücksetzen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_DELETE_SUPPORTER" datatype="html">
+        <source>
+          Unterstützer*in löschen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: ausgewählte*n Unterstützer*in aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DELETE_SUPPORTER" datatype="html">
+        <source>
+          Soll der*ie ausgewählte Unterstützer*in wirklich gelöscht werden?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/unterstuetzung/unterstuetzung.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: ausgewählte*n Unterstützer*in aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_CAUSER" datatype="html">
+        <source>
+          Verursachende*n hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button: Verursachende*n hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_COL_NAME_INSTITUTION" datatype="html">
+        <source>Träger/Institution</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Firma/Institution - Tab Verursachende*n</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_COL_NAME_CAUSER_NAME" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Name des*r Verursachenden - Tab Verursachende*n</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_COL_NAME_CAUSER_ADDRESS" datatype="html">
+        <source>Adresse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Adresse des*r Verursachenden - Tab Verursachende*n</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_COL_NAME_CAUSER_EMAIL" datatype="html">
+        <source>E-Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Email des*r Verursachenden - Tab Verursachende*n</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_COL_NAME_CAUSER_PHONE" datatype="html">
+        <source>Telefon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Telefonnummer des*r Verursachenden - Tab Verursachende*n</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_HEADER" datatype="html">
+        <source>
+            Verursachende*n ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Verursachende*n hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_FIELD_FILLED_IN_CAUSER_CREATION" datatype="html">
+        <source>
+              Sie müssen mindestens eines der folgenden Felder ausfüllen:<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                Firma/Institution, Name
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: im Modal muss mindestens ein Feld ausgefüllt werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_COMPANY" datatype="html">
+        <source>
+                Firma/Institution:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Firma / Institution die den Vorfall verursacht haben</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_CAUSER_NAME" datatype="html">
+        <source>
+                Name:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Name des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_SUBHEADING_ADDRESS" datatype="html">
+        <source>
+                    Adresse:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+        <note priority="1" from="description">Label Bereich von Eingabefeldern für die Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_EMAIL" datatype="html">
+        <source>
+                E-Mail:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: E-Mail-Adresse des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_LABEL_PHONE" datatype="html">
+        <source>
+                Telefon:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Telefonnummer des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_DELETE_CAUSER" datatype="html">
+        <source>
+          Verursachende*n löschen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: ausgewählten Verursachenden aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DELETE_CAUSER" datatype="html">
+        <source>
+          Soll der*i Verursachende wirklich  gelöscht werden?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verursachenden/verursachenden.component.html</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: ausgewählten Verursachenden aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DATE" datatype="html">
+        <source>
+                Datum des Vorfalls:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Wann (Datum) hat sich der Vorfall zugetragen?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_COMPLAINT_UNTIL_DATE" datatype="html">
+        <source>
+                  Beschwerdefrist:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Wann endet die Beschwerdefrist?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_PLACEHOLDER_UNTIL_DATE_GENERATED" datatype="html">
+        <source>automatisch ermittelt aus Datum des Vorfalls</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter, erklärt dass diese Frist automatisch ermittelt wird, bis das Datum des Vorfalls eingegeben wurde</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_LEGAL_ACTION_UNTIL_DATE" datatype="html">
+        <source>
+                  Klagefrist:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Wann endet die Klagefrist?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_CRIMINAL_APP_UNTIL_DATE" datatype="html">
+        <source>
+                  Strafantragsfrist:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Wann endet die Strafantragsfrist?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DISTRICT" datatype="html">
+        <source>
+                  Bezirk des Vorfalls:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: In welchem Bezirk hat sich der Vorfall zugetragen?</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DISTRICT_OTHERS" datatype="html">
+        <source>
+                  anderer Bezirk:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderen Bezirk, in dem sich der Vorfall zugetragen hat (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_DISTRICT_OTHERS" datatype="html">
+        <source>anderen Bezirk eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderen Bezirk angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_ZIPCODE" datatype="html">
+        <source>
+                  PLZ:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: PLZ in der sich der Vorfall zugetragen hat</note>
+      </trans-unit>
+      <trans-unit id="TAB_SHORT_DESCRIPTION_LABEL_SHORT_DESCRIPTION" datatype="html">
+        <source>
+            Kurzbeschreibung des Geschehens:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/kurzbeschreibung/kurzbeschreibung.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">216</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Kurzbeschreibung des Vorfalls</note>
+      </trans-unit>
+      <trans-unit id="SUBHEADER_INVOLVED" datatype="html">
+        <source>Beteiligte und Zeug*innen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Subheader über Tabelle Beteiligte oder Zeug*innen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_INVOLVED" datatype="html">
+        <source>
+                Beteiligte*n oder Zeug*in hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Button: Beteiligte*n oder Zeug*in hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INVOLVED_COL_NAME_INVOLVED_NAME" datatype="html">
+        <source>
+                <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>Name<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">241</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Name des*r Beteiligte*n oder des*r Zeuge*in - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INVOLVED_COL_NAME_INVOLVED_EMAIL" datatype="html">
+        <source>
+                <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>E-Mail<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Email des*r Beteiligte*n oder des*r Zeuge*in - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INVOLVED_COL_NAME_INVOLVED_PHONE" datatype="html">
+        <source>
+                <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>Telefon<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Telefonnummer des*r Beteiligte*n oder des*r Zeuge*in - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INVOLVED_COL_NAME_INVOLVED_NOTE" datatype="html">
+        <source>
+                <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>Bemerkung<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">250</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Notiz zum*r Beteiligten oder Zeuge*in - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="SUBHEADER_EVIDENCES" datatype="html">
+        <source>Beweise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">Subheader über Tabelle Beweise</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_EVIDENCES" datatype="html">
+        <source>
+                Beweisstück hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Button: Beweisstück hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_EVIDENCES_COL_NAME_EVIDENCES_INDEX" datatype="html">
+        <source>Beweis-Nr.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Nummer des Beweisstücks - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="TABLE_EVIDENCES_COL_NAME_EVIDENCES_TITLE" datatype="html">
+        <source>Bezeichnung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">272</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Bezeichnung des Beweisstücks - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="TABLE_EVIDENCES_COL_NAME_DOCUMENT_PLACE" datatype="html">
+        <source>Dokumentenablage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">274</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Ort an dem das Beweisstück abgelegt wurde - Tab Zeug*innen und Beweise</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INVOLVED_HEADER" datatype="html">
+        <source>
+            Beteiligte*n oder Zeug*in ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Beteiligte*n oder Zeug*in hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_FIELD_FILLED_IN_INVOLVED_CREATION" datatype="html">
+        <source>
+              Sie müssen mindestens eines der Felder ausfüllen
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: im Modal muss mindestens ein Feld ausgefüllt werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INVOLVED_LABEL_NAME" datatype="html">
+        <source>
+                Name:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Name des*r Beteiligten oder Zeug*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INVOLVED_LABEL_EMAIL" datatype="html">
+        <source>
+                E-Mail:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: E-Mail-Adresse des*r Beteiligten oder Zeug*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INVOLVED_LABEL_PHONE" datatype="html">
+        <source>
+                Telefon:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Telefonnummer des*r Beteiligten oder Zeug*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INVOLVED_LABEL_NOTE" datatype="html">
+        <source>
+                Bemerkung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Bemerkung zum*r Beteiligten oder Zeug*in</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_EVIDENCE_HEADER" datatype="html">
+        <source>
+          Beweisstück ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Beweisstück hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_EVIDENCE_PLACE_INSERTED" datatype="html">
+        <source>
+            Sie müssen mindestens eines der folgenden Felder ausfüllen:<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+              Bezeichnung oder Dokumentenablage für das Beweisstück
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen einer neuen Beweisstück muss die Dokumentenablage eingegeben werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_EVIDENCE_LABEL_TITLE" datatype="html">
+        <source>
+              Bezeichnung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Bezeichnung des Beweisstücks</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_EVIDENCE_LABEL_PLACE" datatype="html">
+        <source>
+              Dokumentenablage:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zeugen-beweise/zeugen-beweise.component.html</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Dokumentenablage - Ort wo das Beweisstück zu finden ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_LABEL_GROUNDS_OF_DISCRIMINATION" datatype="html">
+        <source>
+          Diskriminierungsmerkmale:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Label über einer Sammlung von Checkboxen: Diskriminierungsmerkmale</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_LABEL_AREA_OF_DIS" datatype="html">
+        <source>
+              Bereich der Diskriminierung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: In welchem Bereich liegt die Diskriminierung?</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_LABEL_AREA_OF_DIS_OTHERS" datatype="html">
+        <source>
+              anderer Bereich der Diskriminierung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderen Bereich der Diskriminierung (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_PLACEHOLDER_AREA_OF_DIS_OTHERS" datatype="html">
+        <source>anderen Bereich der Diskriminierung eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderen Bereich der Diskriminierung angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_LABEL_KIND_OF_DIS" datatype="html">
+        <source>
+              Form der Diskriminierung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">293</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Welche Form von Diskriminierung ist vorgefallen?</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_LABEL_KIND_OF_DIS_OTHERS" datatype="html">
+        <source>
+              andere Form der Diskriminierung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für eine andere Form von Diskriminierung (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_TYPOLOGIE_PLACEHOLDER_KIND_OF_DIS_OTHERS" datatype="html">
+        <source>andere Form der Diskriminierung eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für eine andere Form von Diskriminierung angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_CAUSER_TYPE" datatype="html">
+        <source>
+            Typ der Verursachenden hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description">Button: Typ der Verursachenden hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_CAUSER_TYPOLOGY_COL_NAME" datatype="html">
+        <source>Typ der Verursachenden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Typ der Verursachenden - Tab Falltypologie</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_HEADER" datatype="html">
+        <source>
+          Typologie Verursachende ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Typologie Verursachende hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_CAUSER_TYPE_SELECTED" datatype="html">
+        <source>
+            Bitte wählen Sie den Typ des*r Verursachenden aus
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen eines neuen Eintrags für den Typ des*r Verursachenden muss der Typ des*r Verursachenden ausgewählt werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_CAUSER_TYPE" datatype="html">
+        <source>
+              Typ des*r Verursachenden:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">309</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Typ des*r Verursachenden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_CAUSER_TYPE_OTHERS" datatype="html">
+        <source>
+              anderer Typ von Verursachendem:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderen Typ von Verursachendem (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_CAUSER_TYPE_OTHERS" datatype="html">
+        <source>anderen Typ von Verursachendem eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderen Typ von Verursachendem angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_OWNER_AGENCY" datatype="html">
+        <source>
+                Form der Vermietung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für Form der Vermietung (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_OWNER_AGENCY_OTHERS" datatype="html">
+        <source>
+                andere Form der Vermietung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für andere Form der Vermietung (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_OWNER_AGENCY_OTHERS" datatype="html">
+        <source>andere Form der Vermietung eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für  andere Form der Vermietung angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_NUMBER_OF_APPARTMENTS" datatype="html">
+        <source>
+                Anzahl der Wohneinheiten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">319</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für Anzahl der Wohneinheiten (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_LABEL_NUMBER_OF_APPARTMENTS_OTHERS" datatype="html">
+        <source>
+                andere Anzahl der Wohneinheiten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für andere Anzahl der Wohneinheiten (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_CAUSER_TYPOLOGY_PLACEHOLDER_NUMBER_OF_APPARTMENTS_OTHERS" datatype="html">
+        <source>andere Anzahl der Wohneinheiten eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/typologie/typologie.component.html</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für  andere Anzahl der Wohneinheiten angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_LABEL_GOALS" datatype="html">
+        <source>
+            Ziele der betroffenen Person:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">355</context>
+        </context-group>
+        <note priority="1" from="description">Label über einer Sammlung von Checkboxen: Ziele der betroffenen Person</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_LABEL_GOALS_OTHERS" datatype="html">
+        <source>
+                andere Ziele der betroffenen Person
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für andere Ziele der betroffenen Person (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_PLACEHOLDER_GOALS_OTHERS" datatype="html">
+        <source>andere Ziele eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für andere Ziele der betroffenen Person angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_LABEL_AREAS_OF_LAW" datatype="html">
+        <source>
+            Einschätzung relevanter Rechtsbereiche:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">370</context>
+        </context-group>
+        <note priority="1" from="description">Label über einer Sammlung von Checkboxen: Einschätzung relevanter Rechtsbereiche</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_LABEL_AREAS_OF_LAW_OTHERS" datatype="html">
+        <source>
+                andere relevante Rechtsbereiche
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für andere relevante Rechtsbereiche (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_PLACEHOLDER_AREAS_OF_LAW_OTHERS" datatype="html">
+        <source>andere relevante Rechtsbereiche eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für andere relevante Rechtsbereiche angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_1_LABEL_APPROACH" datatype="html">
+        <source>
+          Lösungsansatz:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf1/verlauf1.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">385</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Lösungsansatz des Vorfalls</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_ADD_INTERVENTION" datatype="html">
+        <source>
+          Neue Intervention hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Button: Intervention hinzufügen</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INTERVENTION_COL_NAME_DATE_INTERVENTION" datatype="html">
+        <source>Datum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">409</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Datum der Intervention - Tab Protokollierung des Verlaufs 2</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INTERVENTION_COL_NAME_FORM_OF_INTERVENTION" datatype="html">
+        <source>Form der Intervention</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">413</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Auswahl der Form der Intervention - Tab Protokollierung des Verlaufs 2</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INTERVENTION_COL_NAME_DEADLINE" datatype="html">
+        <source>gesetzte Antwortfrist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">417</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: gesetzte Frist für Antwort oder Reaktion - Tab Protokollierung des Verlaufs 2</note>
+      </trans-unit>
+      <trans-unit id="TABLE_INTERVENTION_COL_NAME_DESCRIPTION" datatype="html">
+        <source>Bemerkung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">421</context>
+        </context-group>
+        <note priority="1" from="description">Tabellenspalte Beschriftung: Bemerkung zur oder Beschreibung der Intervention - Tab Protokollierung des Verlaufs 2</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_2_LABEL_RESULT" datatype="html">
+        <source>
+          Abschluss / Ergebnis:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">432</context>
+        </context-group>
+        <note priority="1" from="description">Label Auswahl: mit welchem Ergebnis konnte der Vorfall abgeschlossen werden?</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_2_LABEL_RESULT_OTHERS" datatype="html">
+        <source>
+          anderes Ergebnis:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für anderes Ergebnis mit dem der Vorfall abgeschlossen wurde (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_2_PLACEHOLDER_RESULT_OTHERS" datatype="html">
+        <source>anderes Ergebnis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für anderen Ergebnis mit dem der Vorfall abgeschlossen wurde angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="TAB_PROCESS_BLOG_2_LABEL_COMPLETION_DESCRIPTION" datatype="html">
+        <source>
+          Bemerkung zum Abschluss:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">436</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Bemerkungen zum Abschluss des Vorfalls</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_HEADER" datatype="html">
+        <source>
+          Intervention ändern/hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <note priority="1" from="description">Modal-Header Beschriftung: Intervention hinzufügen und ändern</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_INTERVENTION_DATE_SELECTED" datatype="html">
+        <source>
+            Bitte geben Sie das Datum der Intervention an (an dem sie stattgefunden bzw. begonnen hat)
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen einer neuen Intervention muss das Datum der Intervention gesetzt werden</note>
+      </trans-unit>
+      <trans-unit id="ERROR_NO_INTERVENTION_FORM_SELECTED" datatype="html">
+        <source>
+            Bitte geben Sie die Form der Intervention an
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">Fehlermeldung: beim Anlegen einer neuen Intervention muss die Form der Intervention gesetzt werden</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_LABEL_INTERVENTION_DATE" datatype="html">
+        <source>
+              Datum:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Datum an dem die Intervention ausgeführt wurde</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_LABEL_FORM_OF_INTERVENTION" datatype="html">
+        <source>
+              Form der Intervention:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Label Auswahl: Form der Intervention</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_LABEL_FORM_OF_INTERVENTION_OTHERS" datatype="html">
+        <source>
+              andere Form von Intervention:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <note priority="1" from="description">Unsichtbares Label für das Eingabefeld für andere Form von Intervention (Accessibility)</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_PLACEHOLDER_FORM_OF_INTERVENTION_OTHERS" datatype="html">
+        <source>andere Form von Intervention eingeben</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter wird im Eingabefeld für andere Form von Intervention angezeigt, wenn nichts eingegeben ist</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_LABEL_INTERVENTION_RESPONSE_DATE" datatype="html">
+        <source>
+              gesetzte Antwortfrist:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Datum der gesetzten Antwortfrist</note>
+      </trans-unit>
+      <trans-unit id="MODAL_EDIT_INTERVENTION_LABEL_COMPLETION_DESCRIPTION" datatype="html">
+        <source>
+              Bemerkung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <note priority="1" from="description">Label Eingabefeld: Bemerkungen zum Abschluss des Vorfalls</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_DELETE_INTERVENTION" datatype="html">
+        <source>
+          Intervention löschen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: ausgewählte Intervention aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DELETE_INTERVENTION" datatype="html">
+        <source>
+          Soll die ausgewählte Intervention wirklich gelöscht werden?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/verlauf2/verlauf2.component.html</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: ausgewählte Intervention aus der Liste löschen?</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_OPEN_SUMMARY_PRINT_VIEW" datatype="html">
+        <source>
+      Druckansicht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/zusammenfassung/zusammenfassung.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Button: Druckansicht der Zusammenfassung öffnen</note>
+      </trans-unit>
+      <trans-unit id="110829229d5d268d4d6e2259383009154eaa2a22" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{tabLabels[0].labelDefault}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-detail-side-nav/item-detail-side-nav.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">`tabLabels[0].labelId`</note>
+      </trans-unit>
+      <trans-unit id="ce6418dcd08c754eebaff3ce5dc8ef40e92a8aa3" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{tabLabel.labelDefault}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-detail-side-nav/item-detail-side-nav.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">`tabLabel.labelId`</note>
+      </trans-unit>
+      <trans-unit id="LABEL_LAST_UPDATED_DATE" datatype="html">
+        <source>
+        letzte Änderung am </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Footer: letzte Änderung am</note>
+      </trans-unit>
+      <trans-unit id="LABEL_FROM" datatype="html">
+        <source> von </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Footer: (letzte Änderung) vom</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_SAVE_AND_CLOSE" datatype="html">
+        <source>
+            Speichern &amp; Schließen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Button: Vorgang speichern und schließen (zum Dashboard zurückkehren)</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_CLOSE" datatype="html">
+        <source>
+            Schließen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Button: Vorgang schließen (zum Dashboard zurückkehren); wird angezeigt, wenn keine Änderungen vorliegen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_SAVE" datatype="html">
+        <source>
+            Zwischenspeichern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Button: Vorgang zwischenspeichern</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_CANCEL" datatype="html">
+        <source>
+            Letzte Änderungen verwerfen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Button: Änderungen am Vorgang verwerfen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_CREATE_NEW_ITEM" datatype="html">
+        <source>Anlegen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Button: Neuen Vorgang anlegen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_DISCARD_CHANGES" datatype="html">
+        <source>
+          Änderungen verwerfen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: Änderungen an einem Vorgang verwerfen?</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DISCARD_CHANGES" datatype="html">
+        <source>
+          Es liegen Änderungen an Ihrem Vorgang vor, die noch nicht gespeichert wurden.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          Wollen Sie Ihre Änderungen wirklich verwerfen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: Es liegen Änderungen an einem Vorgang vor, sollen diese verworfen werden?</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DISCARD_CHANGES_YES" datatype="html">
+        <source>
+            Änderungen verwerfen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Änderungen an einem Vorgang verwerfen&apos; - verwerfen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DISCARD_CHANGES_CANCEL" datatype="html">
+        <source>
+            Zurück zum Vorgang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Änderungen an einem Vorgang verwerfen&apos; - Zurück zum Vorgang</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_SAVE_UNSUCCESSFUL" datatype="html">
+        <source>
+          Fehler beim Speichern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: Fehler beim Speichern eines Vorgangs</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_SAVE_UNSUCCESSFUL_TRY_AGAIN" datatype="html">
+        <source>
+          Beim Speichern Ihres Vorgangs ist ein Fehler aufgetreten. Wollen Sie es erneut versuchen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: Fehler beim Speichern eines Vorgangs, nochmal versuchen?</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_SAVE_UNSUCCESSFUL_TRY_AGAIN" datatype="html">
+        <source>
+            Erneut versuchen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Fehler beim Speichern eines Vorgangs&apos; - nochmal versuchen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_SAVE_UNSUCCESSFUL_CANCEL" datatype="html">
+        <source>
+            Zurück</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/item-footer/item-footer.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Änderungen an einem Vorgang verwerfen&apos; - abbrechen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_HEADER_UP_DOWNGRADE_TYPE" datatype="html">
+        <source>
+          Änderung des Vorgangstyps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/vorgangstyp/vorgangstyp-list/vorgangstyp-list.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Header: Up- oder Downgrade des Vorganstyps</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_DOWNGRADE_TYPE" datatype="html">
+        <source>
+          Beim Downgrade des Vorganstyps auf einen Vorgangstyp, der weniger umfangreiche Daten hat,
+          werden alle Daten aus Bereichen gelöscht, die im neuen Vorgangstyp nicht eingegeben werden können.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          Es kann also sein, dass bereits eingegebene Daten gelöscht werden.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          Für diese Änderung muss Ihr Vorgang jetzt mit dem neuen Typ gespeichert werden.
+          Die Änderung kann durch anschließendes Abbrechen nicht verworfen werden.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          Wollen Sie wirklich den Vorganstyp ändern?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/vorgangstyp/vorgangstyp-list/vorgangstyp-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: Downgrade des Vorganstyps kann zu Datenverlust führen</note>
+      </trans-unit>
+      <trans-unit id="MODAL_TEXT_UPGRADE_TYPE" datatype="html">
+        <source>
+          Beim Ändern des Vorganstyps muss Ihr Vorgang jetzt mit dem neuen Typ gespeichert werden.
+          Die Änderung kann durch anschließendes Abbrechen nicht verworfen werden.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          Wollen Sie wirklich den Vorganstyp ändern?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/vorgangstyp/vorgangstyp-list/vorgangstyp-list.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Dialog-Infotext: Beim Upgrade des Vorganstyps muss der Vorgang jetzt gespeichert werden</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DOWNGRADE_TYPE_GO_ON" datatype="html">
+        <source>
+            Ja, Vorgangstyp ändern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/vorgangstyp/vorgangstyp-list/vorgangstyp-list.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Up- oder Downgrade des Vorganstyps&apos; - Änderung durchführen</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_MODAL_DOWNGRADE_TYPE_CANCEL" datatype="html">
+        <source>
+            Abbrechen und zurück zum Vorgang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/tabs-fmfw/vorgangstyp/vorgangstyp-list/vorgangstyp-list.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Button auf Modal &apos;Up- oder Downgrade des Vorganstyps&apos; - abbrechen</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_METADATA" datatype="html">
+        <source>Metadaten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Metadaten</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_LABEL_INCIDENT_NUMBER" datatype="html">
+        <source>Fallnummer:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Label Fallnummer</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_LABEL_INCIDENT_DATE" datatype="html">
+        <source>Datum der Eingabe:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Label Datum der Eingabe</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_LABEL_INSTITUTION" datatype="html">
+        <source>Träger / Institution:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Label Träger / Institution</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_LABEL_CONSULTANT" datatype="html">
+        <source>Berater*in:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Label Berater*in</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_INCIDENT_TYPE" datatype="html">
+        <source>Vorgangstyp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Vorgangstyp</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_LABEL_INCIDENT_TYPE" datatype="html">
+        <source>Vorgang:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Label Vorgangstyp</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_GENERALE_DATA" datatype="html">
+        <source>Allgemeine Daten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Allgemeine Daten</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_AFFECTED_PERSON" datatype="html">
+        <source>Betroffene Person</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Betroffene Person</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_SUPPORTER" datatype="html">
+        <source>Angaben zu Unterstützer*innen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Angaben zu UnterstützerInnen</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_SUPPORTER" datatype="html">
+        <source>
+          Keine Unterstützer*innen eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Unterstützer*innen eingegeben wurden</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_SUB_HEADER_SUPPORTER" datatype="html">
+        <source>Unterstützer*in Nr.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Sub-Header UnterstützerIn Nummer x</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_CAUSER" datatype="html">
+        <source>Angaben zu Verursacher*innen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Angaben zu VerursacherInnen</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_CAUSER" datatype="html">
+        <source>
+          Keine Verursacher*innen eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Verursacher*innen eingegeben wurden</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_SUB_HEADER_CAUSER" datatype="html">
+        <source>Verursacher*in Nr.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Sub-Header VerursacherIn Nummer x</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_SHORT_DESCRIPTION" datatype="html">
+        <source>Kurzbeschreibung des Vorfalls</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Kurzbeschreibung des Vorfalls</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_INVOLVED" datatype="html">
+        <source>
+        Beteiligte und Zeug*innen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Beteiligte oder Zeug*innen</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_INVOLVED" datatype="html">
+        <source>
+          Keine Beteiligten bzw. Zeug*innen eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">232</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Beteiligte bzw. Zeug*innen eingegeben wurden</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_SUB_HEADER_INVOLVED" datatype="html">
+        <source>Beteiligte/Zeug*in Nr.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Sub-Header Beteiligte bzw. Zeug*in Nummer x</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_EVIDENCES" datatype="html">
+        <source>Beweise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Beweise</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_EVIDENCES" datatype="html">
+        <source>
+          Keine Beweise eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Beweise eingegeben wurden</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_INCIDENT_TYPOLOGY" datatype="html">
+        <source>Falltypologie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Falltypologie</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_CAUSER_TYPOLOGY" datatype="html">
+        <source>
+          Keine Typologie der Verursachenden eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Typologie der Verursachenden eingegeben wurde</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_SUB_HEADER_INTERVENTION" datatype="html">
+        <source>Typologie des Verursachenden Nr.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">406</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Sub-Header Typologie des Verursachenden Nummer x</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_INCIDENT_BLOG_PART1" datatype="html">
+        <source>Protokollierung des Verlaufs 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">351</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Protokollierung des Verlaufs Teil 1</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_INTERVENTIONS" datatype="html">
+        <source>Interventionen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">395</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Interventionen(Protokollierung des Verlaufs Teil 2)</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_INFO_NO_INTERVENTIONS" datatype="html">
+        <source>
+          Keine Interventionen eingegeben
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">400</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Info, wird angezeigt, wenn keine Interventionen eingegeben wurden</note>
+      </trans-unit>
+      <trans-unit id="CONCLUSION_SUB_HEADER_OUTCOME" datatype="html">
+        <source>Abschluss</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-detail-area/print-view/summary/summary.component.html</context>
+          <context context-type="linenumber">428</context>
+        </context-group>
+        <note priority="1" from="description">Tab Zusammenfassung, Area Header Abschluss(Protokollierung des Verlaufs Teil 2)</note>
+      </trans-unit>
+      <trans-unit id="PLACEHOLDER_INCIDENT_SEARCH" datatype="html">
+        <source>Volltextsuche über alle Vorgänge, mind. 3 Zeichen erforderlich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-search/item-search.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Platzhalter in Eingabefeld für Suche über der Vorgangsliste</note>
+      </trans-unit>
+      <trans-unit id="ACCESSIBILITY_LABEL_INCIDENT_SEARCH" datatype="html">
+        <source>Volltextsuche über alle Vorgänge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-search/item-search.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Label für Eingabefeld für Suche über der Vorgangsliste (Accessibilty)</note>
+      </trans-unit>
+      <trans-unit id="BUTTON_CLEAR_SEARCH" datatype="html">
+        <source>Sucheingabe zurücksetzen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/items/item-list/item-search/item-search.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Button-Tooltip: Sucheingabe zurücksetzen</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

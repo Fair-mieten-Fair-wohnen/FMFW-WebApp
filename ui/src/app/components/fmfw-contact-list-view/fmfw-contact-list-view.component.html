@@ -1,0 +1,5 @@
+<ng-container *ngIf="context.address">{{context.address.toString()}}</ng-container>
+<ng-container *ngIf="context.address && (context.email || context.phone)"><br></ng-container>
+<ng-container *ngIf="context.email">{{context.email}}</ng-container>
+<ng-container *ngIf="context.email && context.phone"><br></ng-container>
+<ng-container *ngIf="context.phone">{{context.phone}}</ng-container>

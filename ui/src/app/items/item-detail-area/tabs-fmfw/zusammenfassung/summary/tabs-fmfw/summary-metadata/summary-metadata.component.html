@@ -1,0 +1,32 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Metadaten@@CONCLUSION_SUB_HEADER_METADATA"
+    label="Metadaten"></fmfw-summary-header>
+
+  <fmfw-textview [item]="item" paramPath="metadata.incident_number"
+                 i18n-label="Tab Zusammenfassung, Label Fallnummer@@CONCLUSION_LABEL_INCIDENT_NUMBER"
+                 label="Fallnummer:"></fmfw-textview>
+
+  <fmfw-textview [item]="item" paramPath="metadata.creation_date"
+                 i18n-label="Tab Zusammenfassung, Label Datum der Eingabe@@CONCLUSION_LABEL_INCIDENT_DATE"
+                 label="Datum der Eingabe:" textFormat="{{TEXTVIEW_FORMATS.DATE}}"></fmfw-textview>
+
+  <fmfw-textview [item]="item" paramPath="metadata.institution"
+                 i18n-label="Tab Zusammenfassung, Label Träger / Institution@@CONCLUSION_LABEL_INSTITUTION"
+                 label="Träger / Institution:"></fmfw-textview>
+
+  <ng-container *ngIf="item.metadata.external_incident">
+    <fmfw-selectbox-content-textview
+      i18n-label="Checkbox-label:für externe Beratungsstelle@@EXTERNAL"
+      label="Für externe Beratungsstelle:"
+      keyValueListName="responsible_institution"
+      [item]="item"
+      paramPath="metadata.responsible_institution"
+    ></fmfw-selectbox-content-textview>
+  </ng-container>
+
+  <fmfw-textview [item]="item" paramPath="metadata.consultant"
+                 i18n-label="Tab Zusammenfassung, Label Berater*in@@CONCLUSION_LABEL_CONSULTANT"
+                 label="Berater*in:"></fmfw-textview>
+
+</section>

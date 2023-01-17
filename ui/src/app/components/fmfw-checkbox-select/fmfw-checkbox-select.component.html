@@ -1,0 +1,30 @@
+<ng-container *ngIf="loaded; else LOADING">
+  <form [formGroup]="checkboxForm">
+    <div class="form-group row">
+      <div class="col-12">
+        <fieldset class="form-group" formArrayName="checkboxes" *ngFor="let item of checkboxes.controls; let i = index;">
+          <div class="row">
+            <div class="offset-1 col-sm-10 glue-left" [formGroupName]="i">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="{{formId+'_checkbox'+i}}"
+                       value="{{checkboxes.controls[i]['controls'].key.value}}" formControlName="selected">
+                <label for="{{formId+'_checkbox'+i}}" class="form-check-label">
+                  {{checkboxes.controls[i]['controls'].label.value}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+</ng-container>
+
+
+<ng-template #LOADING>
+  <div class="row">
+    <div class="form-group col-12">
+      Loading....
+    </div>
+  </div>
+</ng-template>

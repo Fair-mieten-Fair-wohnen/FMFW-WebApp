@@ -1,0 +1,25 @@
+<div class="form-group row">
+  <label [for]="formId" class="col-sm-3 col-form-label">
+    {{label}}</label>
+  <select
+    *ngIf="_keyValueList; else LOADING"
+    class="col-sm-8"
+    (change)="selected()"
+    [(ngModel)]="value"
+    [id]="formId">
+      <option value="">-</option>
+      <option
+        *ngFor="let listItem of _keyValueList"
+        [ngValue]="listItem.key">
+        <ng-container *ngIf="optionsFormat === 'text'">
+          {{listItem.label}}
+        </ng-container>
+        <ng-container *ngIf="optionsFormat === 'date'">
+          {{listItem.label | date: dateTimeFormat}}
+        </ng-container>
+      </option>
+  </select>
+  <ng-template #LOADING>
+    <div class="col-sm-8"></div>
+  </ng-template>
+</div>

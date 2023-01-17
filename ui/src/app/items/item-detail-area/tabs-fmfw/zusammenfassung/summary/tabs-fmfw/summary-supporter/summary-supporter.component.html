@@ -1,0 +1,42 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Angaben zu UnterstützerInnen@@CONCLUSION_SUB_HEADER_SUPPORTER"
+    label="Angaben zu Unterstützer*innen"></fmfw-summary-header>
+
+  <div>
+    <div *ngIf="!item.supporter_list || item.supporter_list.length == 0" class="row">
+      <div class="col-12"
+           i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Unterstützer*innen eingegeben wurden@@CONCLUSION_INFO_NO_SUPPORTER">
+        Keine Unterstützer*innen eingegeben
+      </div>
+    </div>
+    <ng-container *ngFor="let supporter of item.supporter_list; last as isLast; index as i">
+      <fmfw-summary-header
+        class="table-area-subheader"
+        i18n-label="Tab Zusammenfassung, Area Sub-Header UnterstützerIn Nummer x@@CONCLUSION_SUB_SUB_HEADER_SUPPORTER"
+        label="Unterstützer*in Nr."
+        labelsuffix="{{i+1}}">
+      </fmfw-summary-header>
+
+      <fmfw-selectbox-content-textview
+        label="Unterstützungsformat:"
+        i18n-label="Label Eingabefeld: Unterstützungsformat@@MODAL_EDIT_SUPPORTER_LABEL_SUPPORT_FORMAT"
+        keyValueListName="support_format"
+        [item]="supporter"
+        paramPath="support_format"
+      ></fmfw-selectbox-content-textview>
+
+      <fmfw-textview [item]="supporter" paramPath="institution_name"
+                     i18n-label="Label Eingabefeld: Träger bzw. Institution die unterstützt@@MODAL_EDIT_SUPPORTER_LABEL_INSTITUTION"
+                     label="Träger/Institution:"></fmfw-textview>
+
+      <fmfw-textview [item]="supporter" paramPath="supporter_name"
+                     i18n-label="Label Eingabefeld: Name des*r Unterstützer*in oder Ansprechpartner*in beim Träger/bei der Institution@@MODAL_EDIT_SUPPORTER_LABEL_SUPPORTER_NAME"
+                     label="Name:"></fmfw-textview>
+
+      <fmfw-contact-textview [context]="supporter"></fmfw-contact-textview>
+
+      <hr *ngIf="!isLast"/>
+    </ng-container>
+  </div>
+</section>

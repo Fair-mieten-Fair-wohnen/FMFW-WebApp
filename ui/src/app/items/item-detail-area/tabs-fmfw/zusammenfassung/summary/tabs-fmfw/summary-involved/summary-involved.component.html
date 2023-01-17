@@ -1,0 +1,36 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Beteiligte oder Zeug*innen@@CONCLUSION_SUB_HEADER_INVOLVED"
+    label="Beteiligte und Zeug*innen"></fmfw-summary-header>
+
+  <div>
+    <ng-container *ngIf="!item.involved_list || item.involved_list.length == 0">
+      <div class="row">
+        <div class="col-12"
+             i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Beteiligte bzw. Zeug*innen eingegeben wurden@@CONCLUSION_INFO_NO_INVOLVED">
+          Keine Beteiligten bzw. Zeug*innen eingegeben
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngFor="let involved of item.involved_list; last as isLast; index as i">
+      <fmfw-summary-header
+        class="table-area-subheader"
+        i18n-label="Tab Zusammenfassung, Area Sub-Header Beteiligte bzw. Zeug*in Nummer x@@CONCLUSION_SUB_SUB_HEADER_INVOLVED"
+        label="Beteiligte/Zeug*in Nr."
+        labelsuffix="{{i+1}}">
+      </fmfw-summary-header>
+
+      <fmfw-textview [item]="involved" paramPath="name"
+                     i18n-label="Tabellenspalte Beschriftung: Name des*r Beteiligte*n oder des*r Zeuge*in - Tab Zeug*innen und Beweise@@TABLE_INVOLVED_COL_NAME_INVOLVED_NAME"
+                     label="Name:"></fmfw-textview>
+
+      <fmfw-contact-textview [context]="involved"></fmfw-contact-textview>
+
+      <fmfw-textview [item]="involved" paramPath="note" textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"
+                     i18n-label="Tabellenspalte Beschriftung: Notiz zum*r Beteiligten oder Zeuge*in - Tab Zeug*innen und Beweise@@TABLE_INVOLVED_COL_NAME_INVOLVED_NOTE"
+                     label="Bemerkung:"></fmfw-textview>
+
+      <hr *ngIf="!isLast"/>
+    </ng-container>
+  </div>
+</section>

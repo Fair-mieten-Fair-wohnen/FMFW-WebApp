@@ -1,0 +1,31 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Falltypologie@@CONCLUSION_SUB_HEADER_INCIDENT_TYPOLOGY"
+    label="Falltypologie"></fmfw-summary-header>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Label Eingabefeld: In welchem Bereich liegt die Diskriminierung?@@TAB_TYPOLOGIE_LABEL_AREA_OF_DIS"
+    label="Bereich der Diskriminierung:"
+    keyValueListName="area_of_discrimination"
+    [item]="item"
+    paramPath="incident_typology.general.area_of_discrimination"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Label Eingabefeld: Welche Form von Diskriminierung ist vorgefallen?@@TAB_TYPOLOGIE_LABEL_KIND_OF_DIS"
+    label="Form der Diskriminierung:"
+    keyValueListName="form_of_discrimination"
+    multiple=true
+    [item]="item"
+    paramPath="incident_typology.general.form_of_discrimination"
+  ></fmfw-selectbox-content-textview>
+
+  <!-- Diskriminierungsmerkmale -->
+  <fmfw-summary-header
+    class="table-area-subheader"
+    i18n-label="Tab Zusammenfassung, Area Header Diskriminierungsmerkmale@@CONCLUSION_SUB_HEADER_INCIDENT_TYPOLOGY"
+    label="Diskriminierungsmerkmale"></fmfw-summary-header>
+
+  <fmfw-discrimination-tree-readonly [item]="item"></fmfw-discrimination-tree-readonly>
+
+</section>

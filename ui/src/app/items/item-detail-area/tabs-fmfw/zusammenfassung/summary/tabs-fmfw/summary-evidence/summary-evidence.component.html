@@ -1,0 +1,32 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Beweise@@CONCLUSION_SUB_HEADER_EVIDENCES"
+    label="Beweise"></fmfw-summary-header>
+
+  <div>
+    <div *ngIf="!item.evidence_list || item.evidence_list.length == 0" class="row">
+      <div class="col-12"
+           i18n="Tab Zusammenfassung, Info, wird angezeigt, wenn keine Beweise eingegeben wurden@@CONCLUSION_INFO_NO_EVIDENCES">
+        Keine Beweise eingegeben
+      </div>
+    </div>
+    <ng-container *ngFor="let evidence of item.evidence_list; last as isLast; index as i">
+      <fmfw-summary-header
+        class="table-area-subheader"
+        i18n-label="Tab Zusammenfassung, Area Sub-Header Beweisstück Nummer x@@CONCLUSION_SUB_SUB_HEADER_INVOLVED"
+        label="Beweisstück Nr."
+        labelsuffix="{{i+1}}">
+      </fmfw-summary-header>
+
+      <fmfw-textview [item]="evidence" paramPath="title"
+                     i18n-label="Tabellenspalte Beschriftung: Bezeichnung des Beweisstücks - Tab Zeug*innen und Beweise@@TABLE_EVIDENCES_COL_NAME_EVIDENCES_TITLE"
+                     label="Bezeichnung:"></fmfw-textview>
+
+      <fmfw-textview [item]="evidence" paramPath="place"
+                     i18n-label="Tabellenspalte Beschriftung: Ort an dem das Beweisstück abgelegt wurde - Tab Zeug*innen und Beweise@@TABLE_EVIDENCES_COL_NAME_DOCUMENT_PLACE"
+                     label="Dokumentenablage:"></fmfw-textview>
+
+      <hr *ngIf="!isLast"/>
+    </ng-container>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+.readonly_textarea {
+  padding: 0.2rem 2rem;
+}
+
+.summary-label {
+  font-weight: 700;
+}
+
+.summary-section {
+  padding-bottom: 10rem;
+}

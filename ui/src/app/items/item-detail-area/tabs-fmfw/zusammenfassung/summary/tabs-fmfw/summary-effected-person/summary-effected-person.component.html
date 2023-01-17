@@ -1,0 +1,56 @@
+<section>
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Betroffene Person@@CONCLUSION_SUB_HEADER_AFFECTED_PERSON"
+    label="Betroffene Person"></fmfw-summary-header>
+
+  <fmfw-textview [item]="item" paramPath="affected_person.firstname"
+                 i18n-label="Vorname der betroffenen Person@@TAB_PERSON_LABEL_FIRSTNAME"
+                 label="Vorname:"></fmfw-textview>
+
+  <fmfw-textview [item]="item" paramPath="affected_person.lastname"
+                 i18n-label="Nachname der betroffenen Person@@TAB_PERSON_LABEL_NAME"
+                 label="Name:"></fmfw-textview>
+
+  <fmfw-selectbox-content-textview
+    label="Wer ist betroffen?"
+    i18n-label="Auswahl der betroffenen Personen(-gruppe)@@TAB_PERSON_LABEL_AFFECTED_GROUP"
+    keyValueListName="affected_group"
+    [item]="item"
+    paramPath="affected_person.affected_group"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-selectbox-content-textview
+    label="Anzahl Kinder:"
+    i18n-label="Anzahl der Kinder der betroffenen Person@@TAB_PERSON_LABEL_NUMBER_OF_CHILDREN"
+    keyValueListName="number_of_children"
+    [item]="item"
+    paramPath="affected_person.number_of_children"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-contact-textview [context]="item.affected_person"></fmfw-contact-textview>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Geschlecht der betroffenen Person@@TAB_PERSON_LABEL_GENDER"
+    label="Gender:"
+    keyValueListName="gender"
+    [item]="item"
+    paramPath="affected_person.gender"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Alter der betroffenen Person@@TAB_PERSON_LABEL_AGE"
+    label="Alter:"
+    keyValueListName="age"
+    [item]="item"
+    paramPath="affected_person.age"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Angabe darüber wie wahrscheinlich eine Prozesskostenübernahme ist@@TAB_PERSON_LABEL_ABSORB_PROCESS_COSTS"
+    label="Prozesskostenübernahme wahrscheinlich:"
+    keyValueListName="funding_letigation_costs"
+    [item]="item"
+    paramPath="affected_person.funding_letigation_costs"
+  ></fmfw-selectbox-content-textview>
+
+</section>

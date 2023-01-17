@@ -1,0 +1,18 @@
+.scroll-area {
+  overflow-y: auto;
+  height: 100vh;
+  width: 1400px !important;
+  padding: 20px 50px;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 1400px !important;
+  }
+}
+
+@media print {
+  .scroll-area {
+    height: unset;
+  }
+}

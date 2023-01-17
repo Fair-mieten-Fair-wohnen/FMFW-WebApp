@@ -1,0 +1,94 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <form [formGroup]="incidentTypologyForm" *ngIf="item && groundsOfDiscrimination">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <!-- left side -->
+        <label class="col-sm-12 col-form-label"
+               i18n="Label über einer Sammlung von Checkboxen: Diskriminierungsmerkmale@@TAB_TYPOLOGIE_LABEL_GROUNDS_OF_DISCRIMINATION">
+          Diskriminierungsmerkmale (zugeschriebene):</label>
+        <div class="col-12" formGroupName="grounds_of_discrimination">
+          <div class="col-12" formGroupName="other_grounds"><!-- group structure for other fields in tree -->
+            <tree-root
+              #tree
+              (initialized)="initializeTree(tree)"
+              (activate)="activated($event)"
+              (select)="selected($event)"
+              (deactivate)="deactivated($event)"
+              (deselect)="deselected($event)"
+              [nodes]="groundsOfDiscrimination"
+              [options]="options">
+              <ng-template #treeNodeFullTemplate
+                           let-node
+                           let-index="index"
+                           let-templates="templates">
+                <div
+                  [class]="node.getClass()"
+                  [class.tree-node]="true"
+                  [class.tree-node-expanded]="node.isExpanded && node.hasChildren"
+                  [class.tree-node-collapsed]="node.isCollapsed && node.hasChildren"
+                  [class.tree-node-leaf]="node.isLeaf"
+                  [class.tree-node-active]="node.isActive"
+                  [class.tree-node-focused]="node.isFocused">
+
+                  <div class="row">
+                    <div class="col-1">
+                      <tree-node-drop-slot
+                        *ngIf="node.data.isFolder"
+                        [dropIndex]="node.index"
+                        [node]="node.parent">
+                      </tree-node-drop-slot>
+                      <tree-node-checkbox
+                        [node]="node"
+                        *ngIf="!node.data.isFolder">
+                      </tree-node-checkbox>
+                    </div>
+                    <div class="col-11">
+                      <tree-node-wrapper [node]="node" [index]="index" [templates]="templates">
+                      </tree-node-wrapper>
+                      <input class="other-input-text" *ngIf="!node.data.isFolder && (node.data.key.endsWith(otherSelectionKey)) && node.isSelected" formControlName={{node.data.key}}>
+                    </div>
+                  </div>
+
+                  <tree-node-children [node]="node" [templates]="templates">
+                  </tree-node-children>
+                  <tree-node-drop-slot [dropIndex]="node.index + 1" [node]="node.parent">
+                  </tree-node-drop-slot>
+                </div>
+              </ng-template>
+            </tree-root>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12">
+        <!-- right side -->
+        <div formGroupName="general">
+
+          <fmfw-selectbox-with-others
+            [formGroup]="generalForm.get('area_of_discrimination')"
+            formId="typ_area_of_discrimination"
+            label="Bereich der Diskriminierung:"
+            i18n-label="Label Eingabefeld: In welchem Bereich liegt die Diskriminierung?@@TAB_TYPOLOGIE_LABEL_AREA_OF_DIS"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für anderen Bereich der Diskriminierung angezeigt, wenn nichts eingegeben ist@@TAB_TYPOLOGIE_PLACEHOLDER_AREA_OF_DIS_OTHERS"
+            othersFieldPlaceholder="anderen Bereich der Diskriminierung eingeben"
+            keyValueListName="area_of_discrimination">
+          </fmfw-selectbox-with-others>
+
+          <fmfw-checkbox-select-with-others
+            [formGroup]="generalForm.get('form_of_discrimination')"
+            formId="cmp_result"
+            keyValueListName="form_of_discrimination"
+            label="Form der Diskriminierung:"
+            i18n-label="Label Eingabefeld: Welche Form von Diskriminierung ist vorgefallen?@@TAB_TYPOLOGIE_LABEL_KIND_OF_DIS"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für eine andere Form von Diskriminierung angezeigt, wenn nichts eingegeben ist@@TAB_TYPOLOGIE_PLACEHOLDER_KIND_OF_DIS_OTHERS"
+            othersFieldPlaceholder="andere Form der Diskriminierung eingeben"
+          ></fmfw-checkbox-select-with-others>
+
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="i-need-space"></div>
+</div>

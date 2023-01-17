@@ -1,0 +1,76 @@
+<section *ngIf="item && item.short_description">
+  <fmfw-summary-header
+    i18n-label="Tab Zusammenfassung, Area Header Kurzbeschreibung des Vorfalls@@CONCLUSION_SUB_HEADER_SHORT_DESCRIPTION"
+    label="Kurzbeschreibung des Vorfalls"></fmfw-summary-header>
+
+  <ng-container *ngIf="!item.short_description.incident_timerange_end; else TIMERANGE">
+    <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                   i18n-label="Label Eingabefeld: Wann (Datum) hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DATE" label="Datum des Vorfalls:"
+                   paramPath="short_description.incident_date"
+                   textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+    </fmfw-textview>
+
+    <fmfw-textview [dateTimeFormat]="timeFormat" [item]="item"
+                   i18n-label="Label Eingabefeld: Wann (Zeit) hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIME" label="Uhrzeit des Vorfalls:"
+                   paramPath="short_description.incident_time"
+                   textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+    </fmfw-textview>
+  </ng-container>
+
+  <ng-template #TIMERANGE>
+    <div class="row">
+      <div class="col-12 summary-label"
+           i18n="Label Eingabefeld: Wann (Zeitraum) hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_RANGE"
+      >Zeitraum des Vorfalls:</div>
+    </div>
+
+    <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                   i18n-label="Label des Eingabefeldes für den Anfang des Zeitraums des Vorfalls@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIMERANGE_FROM"
+                   label="von:"
+                   paramPath="short_description.incident_date"
+                   textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+    </fmfw-textview>
+
+    <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                   i18n-label="Label des Eingabefeldes für das Ende des Zeitraums des Vorfalls@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIMERANGE_TO"
+                   label="bis:"
+                   paramPath="short_description.incident_timerange_end"
+                   textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+    </fmfw-textview>
+  </ng-template>
+
+  <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                 i18n-label="Label Eingabefeld: Wann endet die Beschwerdefrist?@@TAB_SHORT_DESCRIPTION_LABEL_COMPLAINT_UNTIL_DATE" label="Beschwerdefrist:"
+                 paramPath="short_description.generated_dates.complaint_until_date"
+                 textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+  </fmfw-textview>
+
+  <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                 i18n-label="Label Eingabefeld: Wann endet die Klagefrist?@@TAB_SHORT_DESCRIPTION_LABEL_LEGAL_ACTION_UNTIL_DATE" label="Klagefrist:"
+                 paramPath="short_description.generated_dates.legal_action_until_date"
+                 textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+  </fmfw-textview>
+
+  <fmfw-textview [dateTimeFormat]="dateFormat" [item]="item"
+                 i18n-label="Label Eingabefeld: Wann endet die Strafantragsfrist?@@TAB_SHORT_DESCRIPTION_LABEL_CRIMINAL_APP_UNTIL_DATE" label="Strafantragsfrist:"
+                 paramPath="short_description.generated_dates.criminal_application_until_date"
+                 textFormat="{{TEXTVIEW_FORMATS.DATE}}">
+  </fmfw-textview>
+
+  <fmfw-selectbox-content-textview
+    [item]="item"
+    i18n-label="Label Eingabefeld: In welchem Bezirk hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DISTRICT"
+    keyValueListName="district"
+    label="Bezirk des Vorfalls:"
+    paramPath="short_description.incident_place.incident_district"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-textview [item]="item" i18n-label="Label Eingabefeld: PLZ in der sich der Vorfall zugetragen hat@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_ZIPCODE"
+                 label="PLZ:"
+                 paramPath="short_description.incident_place.incident_zipcode"></fmfw-textview>
+
+  <fmfw-textview [item]="item" i18n-label="Label Eingabefeld: Kurzbeschreibung des Vorfalls@@TAB_SHORT_DESCRIPTION_LABEL_SHORT_DESCRIPTION"
+                 label="Kurzbeschreibung des Geschehens:"
+                 paramPath="short_description.incident_short_description"
+                 textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"></fmfw-textview>
+</section>

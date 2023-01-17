@@ -1,0 +1,142 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div *ngIf="item">
+    <div>
+      <form [formGroup]="incidentShortDescriptionForm">
+
+        <div class="row">
+          <!-- left side -->
+          <div class="col-6">
+            <div class="form-group row">
+              <div class="col-xs-12 col-12 col-md-3">
+                <label *ngIf="showTimeRange"
+                       i18n="Label Area: In welchem Zeitraum hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIMERANGE">
+                  Zeitraum des Vorfalls:</label>
+              </div>
+              <div class="col-xs-12 col-12 col-md-5 form-group">
+                <div class="form-check">
+                  <input class="form-check-input" id="time_range" formControlName="showTimeRange"
+                         type="checkbox" (change)="openTimeRangeField($event)">
+                  <label class="form-check-label" for="time_range"
+                         i18n="Checkbox-label:select time range@@CHECK_TIME_RANGE">
+                    Zeitraum angeben</label>
+                </div>
+              </div>
+              </div>
+
+            <fmfw-date-select
+              [label]="incidentTimeLabel"
+              i18n-placeholder="Platzhalter wird im Eingabefeld für Datum des Vorfalls angezeigt, wenn nichts eingegeben ist@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_DATE"
+              placeholder="Datum auswählen"
+              formId="incident_date"
+              formControlName="incident_date"
+            ></fmfw-date-select>
+
+            <fmfw-date-select
+              *ngIf="showTimeRange"
+              i18n-label = "Label des Eingabefeldes für das Ende des Zeitraums des Vorfalls@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIMERANGE_TO"
+              label="bis:"
+              i18n-placeholder="Platzhalter wird im Eingabefeld für das Ende des Zeitraums des Vorfalls angezeigt, wenn nichts eingegeben ist@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_TIMERANGE_TO"
+              placeholder="Datum auswählen"
+              formId="incident_timerange_end"
+              formControlName="incident_timerange_end"
+            ></fmfw-date-select>
+
+            <div class="form-group row" *ngIf="!showTimeRange">
+              <label for="incident_time" class="col-xs-12 col-12 col-md-3 col-form-label"
+                     i18n="Label Eingabefeld: Wann (Uhrzeit) hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_TIME">
+                Uhrzeit des Vorfalls:</label>
+              <div class="col-xs-12 col-12 col-md-5 form-group">
+                  <div class="well well-lg">
+                    <timepicker
+                      id="incident_time"
+                      formControlName="incident_time"
+                      [showMeridian]="false"
+                      [meridians]="24"></timepicker>
+                  </div>
+              </div>
+            </div>
+
+            <div id="incident-resulting-dates-area" formGroupName="generated_dates">
+              <fmfw-date-select
+                i18n-label="Label Eingabefeld: Wann endet die Beschwerdefrist?@@TAB_SHORT_DESCRIPTION_LABEL_COMPLAINT_UNTIL_DATE"
+                label="Beschwerdefrist:"
+                i18n-placeholder="Platzhalter, erklärt dass diese Frist automatisch ermittelt wird, bis das Datum des Vorfalls eingegeben wurde@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_UNTIL_DATE_GENERATED"
+                placeholder="automatisch ermittelt aus Datum des Vorfalls"
+                formId="complaint_until_date"
+                formControlName="complaint_until_date"
+              ></fmfw-date-select>
+
+              <fmfw-date-select
+                i18n-label="Label Eingabefeld: Wann endet die Klagefrist?@@TAB_SHORT_DESCRIPTION_LABEL_LEGAL_ACTION_UNTIL_DATE"
+                label="Klagefrist:"
+                i18n-placeholder="Platzhalter, erklärt dass diese Frist automatisch ermittelt wird, bis das Datum des Vorfalls eingegeben wurde@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_UNTIL_DATE_GENERATED"
+                placeholder="automatisch ermittelt aus Datum des Vorfalls"
+                formId="legal_action_until_date"
+                formControlName="legal_action_until_date"
+              ></fmfw-date-select>
+
+              <fmfw-date-select
+                i18n-label="Label Eingabefeld: Wann endet die Strafantragsfrist?@@TAB_SHORT_DESCRIPTION_LABEL_CRIMINAL_APP_UNTIL_DATE"
+                label="Strafantragsfrist:"
+                i18n-placeholder="Platzhalter, erklärt dass diese Frist automatisch ermittelt wird, bis das Datum des Vorfalls eingegeben wurde@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_UNTIL_DATE_GENERATED"
+                placeholder="automatisch ermittelt aus Datum des Vorfalls"
+                formId="criminal_application_until_date"
+                formControlName="criminal_application_until_date"
+              ></fmfw-date-select>
+
+            </div>
+
+          </div>
+          <div class="col-6">
+            <!-- right side -->
+
+            <div [formGroup]="incidentPlaceForm">
+
+              <fmfw-selectbox-with-others
+                [formGroup]="incidentPlaceForm.get('incident_district')"
+                i18n-label="Label Eingabefeld: In welchem Bezirk hat sich der Vorfall zugetragen?@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_DISTRICT"
+                label="Bezirk des Vorfalls:"
+                formId="kb_incident_district"
+                i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für anderen Bezirk angezeigt, wenn nichts eingegeben ist@@TAB_SHORT_DESCRIPTION_PLACEHOLDER_INCIDENT_DISTRICT_OTHERS"
+                othersFieldPlaceholder="anderen Bezirk eingeben"
+                keyValueListName="district"
+              ></fmfw-selectbox-with-others>
+
+              <div class="form-group row">
+                <label for="incident_zipcode" class="col-sm-3 col-form-label"
+                       i18n="Label Eingabefeld: PLZ in der sich der Vorfall zugetragen hat@@TAB_SHORT_DESCRIPTION_LABEL_INCIDENT_ZIPCODE">
+                  PLZ:</label>
+                <input type="number" formControlName="incident_zipcode"  id="incident_zipcode" class="col-sm-8 form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="incident_short_description" class="col-sm-12 col-form-label"
+                 i18n="Label Eingabefeld: Kurzbeschreibung des Vorfalls@@TAB_SHORT_DESCRIPTION_LABEL_SHORT_DESCRIPTION">
+            Kurzbeschreibung des Geschehens:</label>
+          <textarea formControlName="incident_short_description"
+                    id="incident_short_description" class="col-sm-12 form-control" rows="15"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="i-need-space"></div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body"
+       i18n="Infotext: beim Zeitraum des Vorfalls wurde ein bis-Datum vor dem von-Datum eingegeben@@TAB_SHORT_DESCRIPTION_INFO_TO_BEFORE_FROM">
+    Bei der Eingabe des Zeitraums, in dem der Vorfalls sich zugetragen hat,
+    haben Sie ein Enddatum ausgewählt das VOR dem ausgewählten Anfangsdatum liegt.
+  </div>
+</ng-template>

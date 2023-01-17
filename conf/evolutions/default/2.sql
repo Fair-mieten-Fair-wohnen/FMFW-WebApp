@@ -1,0 +1,18 @@
+# --- database schema
+
+# --- !Ups
+
+USE adwdoc;
+
+delete from incidents;
+
+insert into incidents (id, incident_type, incident, institution, owner, update_user, created) values (11, 'ALLG_BERATUNG', '{ "id": 11, "type": "ALLG_BERATUNG", "metadata": { "incident_number": "11", "creation_date": "2018-11-19T22:38:25.052Z", "consultant": "Testa Testuser1", "institution": "test-Institution" }}', "test-Institution", "testuser1", "testuser1", now());
+insert into incidents (id, incident_type, incident, institution, owner, update_user, created) values (12, 'MELDUNG', '{ "id": 12, "type": "MELDUNG", "metadata": { "incident_number": "12", "creation_date": "2018-11-20T22:38:25.052Z", "consultant": "Testa Testuser1", "institution": "test-Institution" }}', "test-Institution", "testuser1", "testuser1", now());
+insert into incidents (id, incident_type, incident, institution, owner, update_user, created) values (13, 'FALLBETREUUNG', '{ "id": 13, "type": "FALLBETREUUNG", "metadata": { "incident_number": "13", "creation_date": "2018-11-21T22:38:25.052Z", "consultant": "Testa Testuser1", "institution": "test-Institution" }}', "test-Institution", "testuser1", "testuser1", now());
+insert into incidents (id, incident_type, incident, institution, owner, update_user, created) values (14,	'FALLBETREUUNG',	'{"type":"FALLBETREUUNG","id":14,"metadata":{"incident_number":"14","creation_date":"2019-01-06T12:49:59.379Z","consultant": "Testa Testuser1", "institution": "test-Institution","lastupdated_date":"2019-01-06T18:38:29.519Z","lastupdated_user":"Testa Testuser1"},"generaldata":{"contact_by":"accused_person","anonymous":true,"consent_granted":true},"supporter_list":[{"support_format":"cooperation","institution_name":"Wir kümmern uns.de","supporter_name":"Heike Weisswas","email":"weisswas@wir-kuemmern-uns.de","phone":"030 1253816257"}],"short_description":{"incident_date":"2018-12-12T23:00:00.000Z","incident_time":"2019-01-06T17:45:00.204Z","generated_dates":{"complaint_until_date":"2019-02-12T23:00:00.000Z","legal_action_until_date":"2021-12-12T23:00:00.000Z","criminal_application_until_date":"2019-03-12T23:00:00.000Z"},"incident_place":{"incident_district":"Marzahn_Hellersdorf","incident_zipcode":13243},"incident_short_description":"Klientin wurde an den Mülltonnen von Nachbarin beschimpft"},"involved_list":[{"name":"Else Meyer","email":"frust@wohn.de","phone":"0307136479836","note":"Nachbarin, kann den Vorfall bezeugen"}],"evidence_list":[{"title":"Video vom Vorfall","place":"owncloud/fmfw/ablage-x/2018/fall-xyz/vorfall.mpg4"}],"incident_typology":{"general":{"area_of_discrimination":"existing_housing_situation","form_of_discrimination":"harassment_verbal_attacks"},"grounds_of_discrimination":{"selected_grounds":{"person_of_color":true,"racist_discrimination_ethnic_origin_other":false,"m":true,"disability_other":true,"too_young":true},"other_grounds":{"racist_discrimination_ethnic_origin_other":"","Gender_other":"","sexuell_identity_other":"","disability_other":"psychische Erkrankung","religion_weltanschauung_other":"","age_other":"","social_status_other":"","other":""}},"causer_typology":[{"causer_type":"neighbor"}]},"process_blog_part1":{"goal_person_concerned":["apology","compensation","other"],"goal_person_concerned_others":"Kuchen","areas_of_law":["StGB","other"],"areas_of_law_others":"Recht auf Kuchen","approach":"1. Wohnungsgesellschaft informieren, 2. Brief an die verursachende Nachbarin schreiben, 3. Abwarten"}}', "test-Institution", "testuser1", "testuser1", now());
+
+# --- !Downs
+
+USE adwdoc;
+
+delete from incidents;

@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center align-items-center" style="height:600px;">
+  <form [formGroup]="vorgangstypForm">
+    <div class="form-check" *ngFor="let type of types; let i=index">
+      <input class="form-check-input" type="radio" id="vorgangstyp{{i}}"
+             formControlName="incidentType" value="{{type.key}}" [checked]="item.type==type.key" (click)="checkSelection(type.key)">
+      <label class="form-check-label" for="vorgangstyp{{i}}">
+        {{type.label}}
+      </label>
+    </div>
+  </form>
+  <div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #infoSaveToChangeTypeModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-confirm-save-to-change-type">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-confirm-save-to-change-type" class="modal-title pull-left"
+            i18n="Dialog-Header: Up- oder Downgrade des Vorganstyps@@MODAL_HEADER_UP_DOWNGRADE_TYPE">
+          Änderung des Vorgangstyps</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="infoSaveToChangeTypeModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p *ngIf="downgrade" i18n="Dialog-Infotext: Downgrade des Vorganstyps kann zu Datenverlust führen@@MODAL_TEXT_DOWNGRADE_TYPE">
+          Beim Downgrade des Vorganstyps auf einen Vorgangstyp, der weniger umfangreiche Daten hat,
+          werden alle Daten aus Bereichen gelöscht, die im neuen Vorgangstyp nicht eingegeben werden können.<br>
+          Es kann also sein, dass bereits eingegebene Daten gelöscht werden.<br>
+          Für diese Änderung muss Ihr Vorgang jetzt mit dem neuen Typ gespeichert werden.
+          Die Änderung kann durch anschließendes Abbrechen nicht verworfen werden.<br><br>
+          Wollen Sie wirklich den Vorganstyp ändern?</p>
+        <p *ngIf="!downgrade" i18n="Dialog-Infotext: Beim Upgrade des Vorganstyps muss der Vorgang jetzt gespeichert werden@@MODAL_TEXT_UPGRADE_TYPE">
+          Beim Ändern des Vorganstyps muss Ihr Vorgang jetzt mit dem neuen Typ gespeichert werden.
+          Die Änderung kann durch anschließendes Abbrechen nicht verworfen werden.<br><br>
+          Wollen Sie wirklich den Vorganstyp ändern?</p>
+        <div class="modal-button-group">
+          <button (click)="changeIncidentType()"
+                  i18n="Button auf Modal 'Up- oder Downgrade des Vorganstyps' - Änderung durchführen@@BUTTON_MODAL_DOWNGRADE_TYPE_GO_ON">
+            Ja, Vorgangstyp ändern</button>
+          <button (click)="cancel()"
+                  i18n="Button auf Modal 'Up- oder Downgrade des Vorganstyps' - abbrechen@@BUTTON_MODAL_DOWNGRADE_TYPE_CANCEL">
+            Abbrechen und zurück zum Vorgang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

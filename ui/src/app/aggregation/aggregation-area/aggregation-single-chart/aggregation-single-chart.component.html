@@ -1,0 +1,46 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div>
+    <div class="row" [formGroup]="aggregationSelectionForm">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <fmfw-selectbox
+          formId="agg_singleChart_timeOfDataDump"
+          *ngIf="allTimesOfDataDumps"
+          [keyValueList]="allTimesOfDataDumps"
+          optionsFormat="date"
+          formControlName = "timeOfDataDump"
+          label="Zeitpunkt auswählen:"
+          i18n-label="Label für Selectbox um den Zeitpunkt für die Aggregation auszuwählen@@LABEL_AGGREGATION_SELECT_TIME_OF_DATA_DUMP">
+        </fmfw-selectbox>
+        <div class="form-check">
+          <label class="col-sm-3 col-form-label"></label>
+          <input class="form-check-input" id="aggregation_scope" formControlName="aggregationScope"
+                 type="checkbox">
+          <label class="form-check-label" for="aggregation_scope"
+                 i18n="Checkbox-label:select aggregation scope@@CHECK_AGGREGATION_SCOPE">
+            Nur interne Fälle</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <fmfw-selectbox
+          formId="agg_singleChart_aggregationType"
+          *ngIf="allAggregationTypes"
+          [keyValueList]="allAggregationTypes"
+          formControlName = "aggregationType"
+          label="Typ der Aggregation:"
+          i18n-label="Label für Selectbox um den Typ der Aggregation auszuwählen@@LABEL_AGGREGATION_SELECT_TYPE">
+        </fmfw-selectbox>
+      </div>
+    </div>
+    <div>
+        <fmfw-aggregation-chart
+          *ngIf="chartDataSelected"
+          [timeOfDataDump]="timeOfDataDump"
+          [aggregationType]="aggregationType"
+        >
+        </fmfw-aggregation-chart>
+    </div>
+  </div>
+</div>

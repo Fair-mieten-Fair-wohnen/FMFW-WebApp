@@ -1,0 +1,92 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div>
+    <div>
+      <form [formGroup]="incidentAffectedPersonDataForm">
+        <div *ngIf="incidentAffectedPersonDataForm.controls['contact'].get('address').hasError('pattern', ['zip'])"
+             class="cross-validation-error-message alert alert-danger"
+             i18n="Fehlermeldung: wenn eine Postleitzahl eingegeben wird, muss sie im korrekten Format sein@@ERROR_ZIP_FORMAT_NOT_VALID">
+          Wenn Sie eine Postleitzahl eingeben, geben Sie bitte genau 5 Zahlen ein
+        </div>
+        <div *ngIf="incidentAffectedPersonDataForm.controls['contact'].hasError('pattern', ['email'])"
+             class="cross-validation-error-message alert alert-danger"
+             i18n="Fehlermeldung: beim Anlegen einer neuen Beweisstück muss die Dokumentenablage eingegeben werden@@ERROR_EMAIL_FORMAT_NOT_VALID">
+          Wenn Sie eine E-Mail-Adresse eingeben, geben Sie bitte eine E-Mail in korrektem Format an
+        </div>
+        <div *ngIf="incidentAffectedPersonDataForm.controls['contact'].hasError('pattern', ['phone'])"
+             class="cross-validation-error-message alert alert-danger"
+             i18n="Fehlermeldung: wenn eine Telefonnummer eingegeben wird, muss sie im korrekten Format sein@@ERROR_PHONE_NOMBER_FORMAT_NOT_VALID">
+          Wenn Sie eine Telefonnummer eingeben, geben Sie bitte eine Telefonnummer in korrektem Format an: Zahlen, Leerzeichen und +#()-_
+        </div>
+
+        <div class="form-group row">
+          <label for="ap_name" class="col-sm-3 col-form-label"
+                 i18n="Nachname der betroffenen Person@@TAB_PERSON_LABEL_NAME">
+            Name:</label>
+          <input type="text" formControlName="lastname"  id="ap_name" class="col-sm-8 form-control">
+        </div>
+
+        <div class="form-group row">
+          <label for="ap_firstname" class="col-sm-3 col-form-label"
+                 i18n="Vorname der betroffenen Person@@TAB_PERSON_LABEL_FIRSTNAME">
+            Vorname:</label>
+          <input type="text" formControlName="firstname"  id="ap_firstname" class="col-sm-8 form-control">
+        </div>
+
+        <fmfw-selectbox-with-others
+          [formGroup]="incidentAffectedPersonDataForm.get('affected_group')"
+          formId="ap_affected_group"
+          keyValueListName="affected_group"
+          label="Wer ist betroffen?"
+          i18n-label="Auswahl der betroffenen Personen(-gruppe)@@TAB_PERSON_LABEL_AFFECTED_GROUP"
+          othersFieldPlaceholder="Freitext zur betroffenen Personengruppe"
+          i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld zur betroffenen Personengruppe angezeigt, wenn nichts eingegeben ist@@TAB_PERSON_PLACEHOLDER_AFFECTED_GROUP_OTHERS"
+        ></fmfw-selectbox-with-others>
+
+        <fmfw-selectbox
+          formId="ap_number_of_children"
+          label="Anzahl Kinder:"
+          i18n-label="Anzahl der Kinder der betroffenen Person@@TAB_PERSON_LABEL_NUMBER_OF_CHILDREN"
+          keyValueListName="number_of_children"
+          formControlName="number_of_children">
+        </fmfw-selectbox>
+
+        <fmfw-contact-input
+          [formGroup]="incidentAffectedPersonDataForm.get('contact')"
+          formId="ap_contact"
+          label="Kontakt:"
+          i18n-label="Kontaktdaten einer Person bzw. Institution@@LABEL_CONTACT">
+        </fmfw-contact-input>
+
+        <fmfw-selectbox
+          formId="ap_gender"
+          label="Gender:"
+          i18n-label="Geschlecht der betroffenen Person@@TAB_PERSON_LABEL_GENDER"
+          keyValueListName="gender"
+          formControlName="gender">
+        </fmfw-selectbox>
+
+        <fmfw-selectbox
+          formId="ap_age"
+          label="Alter:"
+          i18n-label="Alter der betroffenen Person@@TAB_PERSON_LABEL_AGE"
+          keyValueListName="age"
+          formControlName="age">
+        </fmfw-selectbox>
+
+        <fmfw-selectbox-with-others
+          [formGroup]="incidentAffectedPersonDataForm.get('funding_letigation_costs')"
+          formId="ap_funding_letigation_costs"
+          label="Prozesskostenübernahme wahrscheinlich:"
+          i18n-label="Angabe darüber wie wahrscheinlich eine Prozesskostenübernahme ist@@TAB_PERSON_LABEL_ABSORB_PROCESS_COSTS"
+          othersFieldPlaceholder="Freitext zur Prozesskostenübernahme"
+          i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für Prozesskostenübernahme wahrscheinlich, andere angezeigt, wenn nichts eingegeben ist@@TAB_PERSON_PLACEHOLDER_ABSORB_PROCESS_COSTS_OTHERS"
+          keyValueListName="funding_letigation_costs">
+        </fmfw-selectbox-with-others>
+      </form>
+    </div>
+  </div>
+  <div class="i-need-space"></div>
+</div>

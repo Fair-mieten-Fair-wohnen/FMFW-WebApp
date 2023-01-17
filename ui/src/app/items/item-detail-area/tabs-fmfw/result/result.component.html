@@ -1,0 +1,34 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div *ngIf="item">
+    <form [formGroup]="incidentCompletionForm">
+      <div class="row">
+        <div class="col-6">
+
+          <fmfw-checkbox-select-with-others
+            [formGroup]="incidentCompletionForm.get('result')"
+            formId="cmp_result"
+            keyValueListName="outcome"
+            label="Abschluss / Ergebnis:"
+            i18n-label="Label Auswahl: mit welchem Ergebnis konnte der Vorfall abgeschlossen werden?@@TAB_PROCESS_BLOG_2_LABEL_RESULT"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für anderes Ergebnis mit dem der Vorfall abgeschlossen wurde angezeigt, wenn nichts eingegeben ist@@TAB_PROCESS_BLOG_2_PLACEHOLDER_RESULT_OTHERS"
+            othersFieldPlaceholder="anderes Ergebnis"
+          ></fmfw-checkbox-select-with-others>
+
+        </div>
+        <div class="col-6">
+
+          <div class="form-group row">
+            <label for="result_description" class="col-sm-12 col-form-label"
+                   i18n="Label Eingabefeld: Bemerkungen zum Abschluss des Vorfalls@@TAB_PROCESS_BLOG_2_LABEL_COMPLETION_DESCRIPTION">
+              Bemerkung zum Abschluss:</label>
+            <textarea formControlName="result_description"
+                      id="result_description" class="col-sm-12 form-control" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

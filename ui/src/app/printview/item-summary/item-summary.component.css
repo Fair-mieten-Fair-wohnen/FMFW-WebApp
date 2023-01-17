@@ -1,0 +1,16 @@
+.print-header-block img {
+  height: 150px;
+}
+.print-header-block {
+    display: block;
+    top: 0;
+    border-bottom: solid 1px black;
+    padding: 20px;
+    margin-left: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.print-content {
+    display: block;
+    top: 230px;
+}

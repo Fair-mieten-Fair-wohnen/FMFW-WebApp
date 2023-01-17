@@ -1,0 +1,40 @@
+<div class="area-tab-content">
+  <div class="area-tab-header row">
+    <div class="col-6">
+      <h2>{{heading}}</h2>
+    </div>
+    <div class="col-6">
+      <button class="float-right" *ngIf="chartDataSelected" id="button-printview"
+              (click)="openPrintView()" i18n="Button: Druckansicht der Zusammenfassung öffnen@@BUTTON_OPEN_SUMMARY_PRINT_VIEW">
+        Druckansicht</button>
+    </div>
+  </div>
+    <div>
+      <div class="row" [formGroup]="aggregationSelectionForm">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <fmfw-selectbox
+            formId="agg_singleChart_timeOfDataDump"
+            *ngIf="allTimesOfDataDumps"
+            [keyValueList]="allTimesOfDataDumps"
+            optionsFormat="date"
+            formControlName = "timeOfDataDump"
+            label="Zeitpunkt auswählen:"
+            i18n-label="Label für Selectbox um den Zeitpunkt für die Aggregation auszuwählen@@LABEL_AGGREGATION_SELECT_TIME_OF_DATA_DUMP">
+          </fmfw-selectbox>
+          <div class="form-check">
+            <label class="col-sm-3 col-form-label"></label>
+            <input class="form-check-input" id="aggregation_scope" formControlName="aggregationScope"
+                   type="checkbox">
+            <label class="form-check-label" for="aggregation_scope"
+                   i18n="Checkbox-label:select aggregation scope@@CHECK_AGGREGATION_SCOPE">
+              Nur interne Fälle</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <fmfw-list-of-aggregated-charts
+      [timeOfDataDump]="timeOfDataDump"
+      *ngIf="chartDataSelected">
+    </fmfw-list-of-aggregated-charts>
+</div>

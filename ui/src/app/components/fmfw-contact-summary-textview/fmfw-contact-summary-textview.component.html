@@ -1,0 +1,24 @@
+<section class="fmfw-contact readonly">
+  <ng-container *ngIf="_context && _context.isContactDataInserted(); else NOCONTACTDATA">
+    <fmfw-textview fieldValue="{{address()}}"
+                   i18n-label="Adresse der betroffenen Person@@TAB_PERSON_LABEL_ADDRESS"
+                   label="Adresse:"></fmfw-textview>
+
+    <fmfw-textview [item]="_context" paramPath="email"
+                   i18n-label="E-Mail-Adresse der betroffenen Person@@TAB_PERSON_LABEL_EMAIL"
+                   label="E-Mail:"></fmfw-textview>
+
+    <fmfw-textview [item]="_context" paramPath="phone"
+                   i18n-label="Telefonnummer der betroffenen Person@@TAB_PERSON_LABEL_PHONE"
+                   label="Telefon:"></fmfw-textview>
+  </ng-container>
+</section>
+
+<ng-template #NOCONTACTDATA>
+  <div class="row">
+    <div class="col-4 summary-label"
+    i18n="Label 'Kontaktdaten' wenn diese leer sind@@CONTACTDATA_LABEL_FOR_EMPTY_SET">Kontaktdaten:</div>
+    <div class="col-8"
+      i18n="String 'Kontaktdaten nicht gesetzt' wenn diese leer sind@@CONTACTDATA_LABEL_FOR_EMPTY_SET">nicht gesetzt</div>
+  </div>
+</ng-template>

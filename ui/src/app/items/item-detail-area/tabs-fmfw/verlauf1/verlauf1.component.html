@@ -1,0 +1,45 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div *ngIf="item">
+    <form [formGroup]="incidentProcessBlog1Form">
+      <div class="row">
+        <div class="col-6">
+
+          <fmfw-checkbox-select-with-others
+            [formGroup]="incidentProcessBlog1Form.get('goal_person_concerned')"
+            formId="la_goal_person_concerned"
+            keyValueListName="goal_person_concerned"
+            label="Ziele der betroffenen Person:"
+            i18n-label="Label über einer Sammlung von Checkboxen: Ziele der betroffenen Person@@TAB_PROCESS_BLOG_1_LABEL_GOALS"
+            othersFieldPlaceholder="andere Ziele eingebe"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für andere Ziele der betroffenen Person angezeigt, wenn nichts eingegeben ist@@TAB_PROCESS_BLOG_1_PLACEHOLDER_GOALS_OTHERS"
+          ></fmfw-checkbox-select-with-others>
+
+        </div>
+        <div class="col-6">
+
+          <fmfw-checkbox-select-with-others
+            [formGroup]="incidentProcessBlog1Form.get('areas_of_law')"
+            formId="la_areas_of_law"
+            keyValueListName="areas_of_law"
+            label="Einschätzung relevanter Rechtsbereiche:"
+            i18n-label="Label über einer Sammlung von Checkboxen: Einschätzung relevanter Rechtsbereiche@@TAB_PROCESS_BLOG_1_LABEL_AREAS_OF_LAW"
+            i18n-othersFieldPlaceholder="Platzhalter wird im Eingabefeld für andere relevante Rechtsbereiche angezeigt, wenn nichts eingegeben ist@@TAB_PROCESS_BLOG_1_PLACEHOLDER_AREAS_OF_LAW_OTHERS"
+            othersFieldPlaceholder="andere relevante Rechtsbereiche eingeben"
+          ></fmfw-checkbox-select-with-others>
+
+          <div class="form-group row">
+            <label for="approach" class="col-sm-12 col-form-label"
+                   i18n="Label Eingabefeld: Lösungsansatz des Vorfalls@@TAB_PROCESS_BLOG_1_LABEL_APPROACH">
+              Lösungsansatz:</label>
+            <textarea formControlName="approach"
+                      id="approach" class="col-sm-12 form-control" rows="15"></textarea>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

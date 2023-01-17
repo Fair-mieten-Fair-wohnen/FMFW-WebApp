@@ -1,0 +1,104 @@
+{
+  "type": "MELDUNG",
+  "id": 407,
+  "metadata": {
+    "incident_number": "407",
+    "creation_date": "2020-10-08T09:38:09.434Z",
+    "lastupdated_date": "2022-06-22T07:00:17.221Z",
+    "lastupdated_user": "Admin Api-User",
+    "institution": "FMFW-Fachstelle",
+    "consultant": "Barbara Gande",
+    "external_incident": false,
+    "responsible_institution": "fmfw_fachstelle"
+  },
+  "generaldata": {
+    "contact_by": "uninvolved_person",
+    "first_contact_date": "2020-10-21T07:52:22.000Z",
+    "anonymous": true,
+    "general_comment": "Weiterverwiesen vom ADNB",
+    "become_aware_of": "forwarding",
+    "become_aware_of_others": "ADNB"
+  },
+  "supporter_list": [
+    {
+      "support_format": "individual_support",
+      "support_format_others": "",
+      "institution_name": "",
+      "supporter_name": "",
+      "address": {},
+      "email": "",
+      "phone": ""
+    }
+  ],
+  "causer_list": [
+    {
+      "id": "f2ab5b1b-93d9-46ef-b97b-3c392bb62671",
+      "company_institution_name": "Gallerie",
+      "causer_name": "",
+      "address": {},
+      "email": "",
+      "phone": ""
+    },
+    {
+      "id": "56c79773-1611-4e32-bcc5-9f069698b5f8",
+      "company_institution_name": "",
+      "causer_name": "",
+      "address": {},
+      "email": "",
+      "phone": ""
+    }
+  ],
+  "short_description": {
+    "incident_date": "2020-09-20T22:00:00.000Z",
+    "incident_time": null,
+    "generated_dates": {
+      "complaint_until_date": "2020-11-20T23:00:00.000Z",
+      "legal_action_until_date": "2023-09-20T22:00:00.000Z",
+      "criminal_application_until_date": "2020-12-20T23:00:00.000Z"
+    },
+    "incident_place": {
+      "incident_district": "Friedrichshain_Kreuzberg",
+      "incident_zipcode": 10245
+    },
+    "incident_short_description": "Betroffene Person ist Künstler, geflüchtet, hat Flüchtlingsstatus in Frankreich. Vermietende sind auch Galleristen von betroffener Person. Wohnugn ist in sehr schlechtem Zustand -Schimmel, etc.\nVermietende machen ohne Erlaubnis von Bauamt Renovierung (auch Arbeitsschutzmaßnahmen vernachlässigt - 11 jähriges Kind arbeitet auf Baustelle). Ohne Erlaubnis Renovierung in Wohnung von RS, er wurde rassistsich beleidigt. Giftige Baumaterialien - betroffene Person musste ins Krankenhaus. Auch andere syrische Familie betroffen.\nRS hat bereits Rechtsanwalt und geht gegen Vermietende vor, auch mit Ordnungsamt. Will ausziehen und hat deshalb 3 Monate Miete nicht bezahlt - um Kaution auszugleichen. Daraufhin hat die Firma seien Kunstwerke einbehalten als \"Kaution\".\nGallerist*innen haben mehrere Projekte mit Geflüchteten.\n"
+  },
+  "evidence_list": [
+    {
+      "title": "Protokoll und Fotos",
+      "place": "bei betroffener Person"
+    }
+  ],
+  "incident_typology": {
+    "general": {
+      "area_of_discrimination": "existing_housing_situation",
+      "form_of_discrimination": [
+        "direct",
+        "verbal_harassment"
+      ]
+    },
+    "grounds_of_discrimination": {
+      "selected_grounds": {
+        "person_of_color": true,
+        "unsecured_stay": true,
+        "money": true,
+        "refugee": true
+      }
+    },
+    "causer_typology": [
+      {
+        "causer_id": "f2ab5b1b-93d9-46ef-b97b-3c392bb62671",
+        "causer_type": "public_institution",
+        "causer_type_others": ""
+      },
+      {
+        "causer_id": "56c79773-1611-4e32-bcc5-9f069698b5f8",
+        "causer_type": "owner",
+        "causer_type_others": "",
+        "owner_agency": "privat",
+        "owner_agency_others": "",
+        "number_of_appartments": "less_50",
+        "number_of_appartments_others": ""
+      }
+    ]
+  }
+}

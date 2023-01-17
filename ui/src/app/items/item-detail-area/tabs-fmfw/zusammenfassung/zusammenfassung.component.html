@@ -1,0 +1,15 @@
+<div class="area-tab-content">
+  <div class="area-tab-header row">
+    <div class="col-6">
+      <h2>{{heading}}</h2>
+    </div>
+    <div class="col-6">
+      <button class="float-right" *ngIf="item" id="button-printview" (click)="openPrintView()" i18n="Button: Druckansicht der Zusammenfassung öffnen@@BUTTON_OPEN_SUMMARY_PRINT_VIEW">
+      Druckansicht</button>
+    </div>
+  </div>
+  <div class="container">
+    <app-summary></app-summary>
+  </div>
+  <div class="i-need-space"></div>
+</div>

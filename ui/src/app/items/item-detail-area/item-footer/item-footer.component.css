@@ -1,0 +1,31 @@
+.item-footer {
+  width: 100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  height: 5rem;
+  overflow:hidden;
+  z-index: 500;
+  background-color: #555555;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.footer-button-group {
+  padding-top: 10px;
+  text-align: center;
+}
+button {
+  margin: 0px 10px;
+}
+
+.item-meta-data span {
+  margin: 0rem 0.5rem;
+}
+.align-items-right {
+  float: right;
+}
+app-prev-next-button-group {
+  margin: 0rem 2rem;
+}

@@ -1,0 +1,15 @@
+<div>
+  <ul *ngIf="tabLabels.length === 1">
+    <li>
+      <a class="list active"
+         i18n=`tabLabels[0].labelId`>{{tabLabels[0].labelDefault}}</a>
+    </li>
+  </ul>
+  <ul *ngIf="tabLabels.length > 1">
+    <li *ngFor="let tabLabel of tabLabels">
+      <a class="list" [routerLink]="tabLabel.linkSuffix" routerLinkActive="active"
+         i18n=`tabLabel.labelId`>{{tabLabel.labelDefault}}</a>
+    </li>
+  </ul>
+</div>
+

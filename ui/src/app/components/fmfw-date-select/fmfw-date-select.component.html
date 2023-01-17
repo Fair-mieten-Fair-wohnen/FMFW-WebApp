@@ -1,0 +1,22 @@
+<div class="form-group row">
+  <label for="{{formId + '_date'}}" class="col-sm-3 col-form-label">
+    {{label}}</label>
+  <div class="col-sm-6 form-group calendar-div" [formGroup]="dateForm">
+    <input id="{{formId + '_date'}}"
+           class="form-control"
+           #dp="bsDatepicker"
+           bsDatepicker
+           formControlName="date"
+           [attr.disabled]="disabled?true:null"
+           placeholder="{{placeholder}}"
+           [bsConfig]="{ dateInputFormat: 'DD.MM.YYYY', containerClass: 'theme-dark-blue' }"/>
+  </div>
+  <div class="col-sm-1 form-group calendar-div">
+    <button class="btn btn-reset-date" type="button" *ngIf="!disabled && dateValueSet" (click)="deleteItem()">
+    </button>
+  </div>
+  <div class="col-sm-2 form-group calendar-div">
+    <button class="btn btn-calendar" type="button" *ngIf="!disabled" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen">
+    </button>
+  </div>
+</div>

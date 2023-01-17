@@ -1,0 +1,39 @@
+<ng-container *ngIf="label !== undefined; else NOLABEL">
+  <div class="row">
+    <div class="col-4 summary-label">{{label}}</div>
+
+    <div class="col-8">
+      <ng-container [ngTemplateOutlet]="CONTENT"></ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #NOLABEL>
+  <ng-container [ngTemplateOutlet]="CONTENT"></ng-container>
+</ng-template>
+
+
+<ng-template #CONTENT>
+  <ng-container *ngIf="loading">loading...</ng-container>
+  <ng-container *ngIf="(fieldValueList && fieldValueList.length > 0) || otherFieldValue; else notSetTextTemplate">
+    <ng-container *ngIf="multiple; else SINGLE">
+      <ul>
+        <li *ngFor="let selection of fieldValueList">
+          {{selection}}
+        </li>
+        <li *ngIf="otherFieldValue">
+          {{otherSelectionLabel}}: {{otherFieldValue}}
+        </li>
+      </ul>
+    </ng-container>
+    <ng-template #SINGLE>
+      <ng-container *ngIf="otherFieldValue; else SINGLEVALUE">
+        {{otherSelectionLabel}}: {{otherFieldValue}}
+      </ng-container>
+      <ng-template #SINGLEVALUE>{{fieldValueList[0]}}</ng-template>
+    </ng-template>
+  </ng-container>
+</ng-template>
+
+<ng-template #notSetTextTemplate>{{getDefaultPlaceholder()}}</ng-template>
+

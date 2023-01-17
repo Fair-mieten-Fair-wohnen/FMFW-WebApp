@@ -1,0 +1,50 @@
+<section>
+  <fmfw-summary-header
+    label="Allgemeine Daten"
+    i18n-label="Tab Zusammenfassung, Area Header Allgemeine Daten@@CONCLUSION_SUB_HEADER_GENERALE_DATA"></fmfw-summary-header>
+
+  <fmfw-selectbox-content-textview
+    i18n-label="Durch welche Personengruppe erfolgte die Kontaktaufnahme?@@TAB_GENERAL_CONTACT_BY"
+    label="Kontaktaufnahme durch:"
+    keyValueListName="contact_by"
+    [item]="item"
+    paramPath="generaldata.contact_by"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-textview [item]="item" paramPath="generaldata.first_contact_date"
+                 textFormat="{{TEXTVIEW_FORMATS.DATE}}" [dateTimeFormat]="dateFormat"
+     i18n-label="Label Eingabefeld: Wann (Datum) fand die initiale Kontaktaufnahme statt?@@TAB_SHORT_DESCRIPTION_LABEL_FIRST_CONTACT_DATE"
+                 label="Datum der ersten Kontaktaufnahme:"></fmfw-textview>
+
+  <fmfw-selectbox-content-textview
+    *ngIf="item && item.type !== 'ALLG_BERATUNG'"
+    i18n-label="Label zu Auswahl der Sprache, in der die Beratung stattfinden soll@@TAB_PERSON_LABEL_ADVISE_LANGUAGE"
+    label="Sprache in der die Beratung stattfinden soll:"
+    keyValueListName="advise_language"
+    [item]="item"
+    paramPath="generaldata.advise_language"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-textview *ngIf="item.type == 'MELDUNG'"
+    [item]="item" paramPath="generaldata.anonymous" textFormat="{{TEXTVIEW_FORMATS.CHECKBOX}}"
+                 i18n-label="Eine Meldung kann hier als anonym gemeldet gekennzeichnet werden@@ANONYMOUS"
+                 label="anonym gemeldet:"></fmfw-textview>
+
+  <fmfw-textview *ngIf="item.type !== 'ALLG_BERATUNG' && !(item.type == 'MELDUNG' && item.generaldata && item.generaldata.anonymous)"
+                 [item]="item" paramPath="generaldata.consent_granted" textFormat="{{TEXTVIEW_FORMATS.CHECKBOX}}"
+                 i18n-label="Wurde eine Einverständniserklärung der betroffenen Person gegeben?@@TAB_GENERAL_CONSENT_GRANTED"
+                 label="Einverständniserklärung erteilt:"></fmfw-textview>
+
+  <fmfw-selectbox-content-textview
+    label="Wie haben Sie von der Fachstelle erfahren?"
+    i18n-label="Label zu Auswahl, wie die Person von der Fachstelle erfahren hat@@TAB_PERSON_LABEL_BECOME_AWARE_OF"
+    keyValueListName="become_aware_of"
+    [item]="item"
+    paramPath="generaldata.become_aware_of"
+  ></fmfw-selectbox-content-textview>
+
+  <fmfw-textview [item]="item" paramPath="generaldata.general_comment" textFormat="{{TEXTVIEW_FORMATS.TEXTAREA}}"
+                 i18n-label="Label Eingabefeld: Allgemeine Bemerkungen zum Vorfalls@@TAB_GENERAL_COMMENT"
+                 label="Bemerkung:"></fmfw-textview>
+
+</section>

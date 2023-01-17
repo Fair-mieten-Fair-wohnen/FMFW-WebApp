@@ -1,0 +1,155 @@
+<div class="area-tab-content">
+  <div class="area-tab-header">
+    <h2>{{heading}}</h2>
+  </div>
+  <div *ngIf="item">
+    <div>
+      <div class="fmfw-table-button-row">
+        <button id="button-add-item" (click)="showDialog2AddCauser()" i18n="Button: Verursachende*n hinzufügen@@BUTTON_ADD_CAUSER">
+          Verursachende*n hinzufügen</button>
+      </div>
+      <div>
+        <table class="table table-fixed fmfw-table table-striped">
+          <thead>
+            <tr>
+              <th i18n="Tabellenspalte Beschriftung: Firma/Institution - Tab Verursachende*n@@TABLE_CAUSER_COL_NAME_INSTITUTION">Träger/Institution</th>
+              <th i18n="Tabellenspalte Beschriftung: Name des*r Verursachenden - Tab Verursachende*n@@TABLE_CAUSER_COL_NAME_CAUSER_NAME">Name</th>
+              <th i18n="Tabellenspalte Beschriftung: Kontaktdaten  einer Person bzw. Institution@@TABLE_LABEL_CONTACT">Kontakt</th>
+              <th i18n="Tabellenspalte Beschriftung: Typ des*r Verursachenden - Tab Verursachende*n@@TABLE_CAUSER_COL_NAME_CAUSER_TYPE">Typ des*r Verursachenden</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let causer of item.causer_list ; let i=index">
+              <td>{{causer.company_institution_name}}</td>
+              <td>{{causer.causer_name}}</td>
+              <td><fmfw-contact-list-view [context]="causer"></fmfw-contact-list-view></td>
+              <td><fmfw-causer-type-textview [causerType]="getCauserType(causer)"></fmfw-causer-type-textview></td>
+              <td>
+                <button type="button" class="icon-btn" (click)="editCauser(i)"
+                        i18n-title="Button-Tooltip: ändern@@BUTTON_TOOLTIP_EDIT" title="ändern">
+                  <span class="ion ion-md-create"></span></button>
+                <button type="button" class="icon-btn" (click)="deleteCauser(i)"
+                        i18n-title="Button-Tooltip: löschen@@BUTTON_TOOLTIP_DELETE" title="löschen">
+                  <span class="ion ion-md-close-circle"></span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="i-need-space"></div>
+  </div>
+
+  <div class="modal fade" bsModal #editCauserModal="bs-modal"
+       tabindex="-1" role="dialog" aria-labelledby="dialog-edit-causer-name">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="dialog-edit-causer-name" class="modal-title pull-left"
+              i18n="Modal-Header Beschriftung: Verursachende*n hinzufügen und ändern@@MODAL_EDIT_CAUSER_HEADER">
+            Verursachende*n ändern/hinzufügen</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="editCauserModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form [formGroup]="editCauserForm" (ngSubmit)="onSubmit()">
+          <div class="modal-body">
+            <div *ngIf="causerNameForm.hasError('emptyFormCannotSubmitted')"
+                 class="cross-validation-error-message alert alert-danger"
+                 i18n="Fehlermeldung: im Modal muss mindestens ein Feld ausgefüllt werden@@ERROR_NO_FIELD_FILLED_IN_CAUSER_CREATION">
+              Sie müssen mindestens eines der folgenden Felder ausfüllen:<br>
+                Firma/Institution, Name
+            </div>
+            <div *ngIf="addressForm.hasError('pattern', ['zip'])"
+                 class="cross-validation-error-message alert alert-danger"
+                 i18n="Fehlermeldung: wenn eine Postleitzahl eingegeben wird, muss sie im korrekten Format sein@@ERROR_ZIP_FORMAT_NOT_VALID">
+              Wenn Sie eine Postleitzahl eingeben, geben Sie bitte genau 5 Zahlen ein
+            </div>
+            <div *ngIf="contactForm.hasError('pattern', ['email'])"
+                 class="cross-validation-error-message alert alert-danger"
+                 i18n="Fehlermeldung: wenn eine E-Mail-adresse eingegeben wird, muss sie im korrekten Format sein@@ERROR_EMAIL_FORMAT_NOT_VALID">
+              Wenn Sie eine E-Mail-Adresse eingeben, geben Sie bitte eine E-Mail in korrektem Format an
+            </div>
+            <div *ngIf="contactForm.hasError('pattern', ['phone'])"
+                 class="cross-validation-error-message alert alert-danger"
+                 i18n="Fehlermeldung: wenn eine Telefonnummer eingegeben wird, muss sie im korrekten Format sein@@ERROR_PHONE_NOMBER_FORMAT_NOT_VALID">
+              Wenn Sie eine Telefonnummer eingeben, geben Sie bitte eine Telefonnummer in korrektem Format an: Zahlen, Leerzeichen und +#()-_
+            </div>
+
+
+            <ng-container [formGroup]="causerNameForm">
+              <div class="form-group row">
+                <label for="causer_institution" class="col-sm-4 col-form-label"
+                       i18n="Label Eingabefeld: Firma / Institution die den Vorfall verursacht haben@@MODAL_EDIT_CAUSER_LABEL_COMPANY">
+                  Firma/Institution:</label>
+                <input type="email" formControlName="company_institution_name"  id="causer_institution" class="col-sm-8 form-control">
+              </div>
+
+              <div class="form-group row">
+                <label for="causer_name" class="col-sm-4 col-form-label"
+                       i18n="Label Eingabefeld: Name des*r Verursachenden@@MODAL_EDIT_CAUSER_LABEL_CAUSER_NAME">
+                  Name:</label>
+                <input type="text" formControlName="causer_name"  id="causer_name" class="col-sm-8 form-control">
+              </div>
+            </ng-container>
+
+            <fmfw-contact-input
+              [formGroup]="editCauserForm.get('contact')"
+              formId="cau_contact"
+              label="Kontakt:"
+              i18n-label="Kontaktdaten einer Person bzw. Institution@@LABEL_CONTACT">
+            </fmfw-contact-input>
+
+            <fmfw-causer-topology
+              [formGroup]="editCauserForm.get('causer_type')"
+              formId="cau_type"
+              label="Typ des*r Verursachenden"
+              i18n-label="Hauptüberschrift für den Typ des*r Verursachenden@@MAIN_LABEL_CAUSER_TYPE">
+            ></fmfw-causer-topology>
+
+            <div class="modal-button-group">
+              <button type="submit" [disabled]="!causerNameForm.valid"
+                      i18n="Button auf Modal 'ändern/hinzufügen' - Änderungen übernehmen@@MODAL_EDIT_BUTTON_SUBMIT">
+                Änderungen übernehmen</button>
+              <button type="button" (click)="editCauserModal.hide()"
+                      i18n="Button auf Modal 'ändern/hinzufügen' - abbrechen (Modal schließen, Änderungen nicht übernehmen aber Eingaben im Modal erstmal nicht entfernen@@MODAL_EDIT_BUTTON_CANCEL">
+                Abbrechen</button>
+              <button type="button" (click)="clearInputs()"
+                      i18n="Button auf Modal 'ändern/hinzufügen' - Eingaben zurücksetzen@@MODAL_EDIT_BUTTON_CLEAR">
+                Eingaben zurücksetzen</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #confirmDeleteItemModal="bs-modal"
+     tabindex="-1" role="dialog" aria-labelledby="confirm-delete-item">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="confirm-delete-item" class="modal-title pull-left"
+            i18n="Dialog-Header: ausgewählten Verursachenden aus der Liste löschen?@@MODAL_HEADER_DELETE_CAUSER">
+          Verursachende*n löschen?</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="confirmDeleteItemModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p i18n="Dialog-Infotext: ausgewählten Verursachenden aus der Liste löschen?@@MODAL_TEXT_DELETE_CAUSER">
+          Soll der*i Verursachende wirklich  gelöscht werden?</p>
+        <div class="modal-button-group">
+          <button (click)="deleteConfirmed()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - löschen@@BUTTON_MODAL_DELETE_YES">
+            Löschen</button>
+          <button (click)="confirmDeleteItemModal.hide()"
+                  i18n="Button auf Modal zum Bestätigen vom Löschen - abbrechen und nicht löschen@@BUTTON_MODAL_DELETE_NO">
+            nicht löschen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

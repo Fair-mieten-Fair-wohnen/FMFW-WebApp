@@ -1,0 +1,31 @@
+<ng-container [formGroup]="_formGroup">
+  <div class="form-group row">
+    <label [for]="_formId" class="col-sm-3 col-form-label">
+      {{label}}</label>
+    <select
+      *ngIf="keyValueList; else LOADING"
+      class="col-sm-8"
+      (change)="selected()"
+      formControlName="selected"
+      [id]="_formId">
+      <option value="">-</option>
+      <option
+        *ngFor="let listItem of keyValueList"
+        [ngValue]="listItem.key">
+        {{listItem.label}}
+      </option>
+    </select>
+    <ng-template #LOADING>
+      <div class="col-sm-8"></div>
+    </ng-template>
+  </div>
+
+  <div class="form-group col-12 row" *ngIf="showOthersInput">
+    <label hidden [for]="_othersFormId">
+      {{label}}</label>
+    <input type="text" formControlName="others"  [id]="_othersFormId"
+           [placeholder]="othersFieldPlaceholder"
+           class="offset-md-4 col-sm-7 form-control other-addon">
+  </div>
+</ng-container>
+
